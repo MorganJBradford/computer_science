@@ -1,0 +1,24 @@
+_Negation, Conjunction, and Disjunction_
+
+There are 6 logical operators that wel will focus on:
+
+~ Negation
+~ Conjunction
+~ Disjunction
+~ Exclusive Or
+~ Implication
+~ Biconditional
+
+$ Compound propositions are formed by combining simple propositions using logical operators. \
+
+* Negation:
+  > Let p be a proposition. ~p is called negation of p which simyl states that
+  >> "It is not the case that p"
+  > if p is true then ~p is false and vice versa.
+* Conjunction:
+  > Let p and q be two propositions. Conjunction of p and q is donoted by p ^ q
+  > When both p and q are true then only the compound proposition p ^ q is true.
+** Both 'but' and 'and' are used to represent conjunction.
+* Disjunction:
+  > Let p and q be two propositions. The XOR of p and q (denoted by p ⊕ q) is a proposition that simply means that exactly one of p and q will be true but both cannot be true at the same time.
+** Either 'or' or 'but not both' are used to represent disjunction.
