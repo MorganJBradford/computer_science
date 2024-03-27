@@ -32,10 +32,10 @@ These types of problems can be very easily solved using propositional logic.
 
 # Propositional Logic:
 ## What is proposition?
-   $ Proposition is a _declarative sentence_ (a sentence that is declaring a fact or stating an argument) which can be either true or false but not both.
+   : Proposition is a _declarative sentence_ (a sentence that is declaring a fact or stating an argument) which can be either true or false but not both.
 
 
-   $ area of logic that studies ways of _joining_ and/or _modifying_ propositions to form more complicated propositions and it also studios the _logical relationships_ and _properties_ derived from these combined/altered propesitions.
+   : area of logic that studies ways of _joining_ and/or _modifying_ propositions to form more complicated propositions and it also studios the _logical relationships_ and _properties_ derived from these combined/altered propesitions.
 
    ## Compound Propositions:
 ### Why do we need compound propositions?
@@ -50,4 +50,4 @@ OR
    > q = this time he si representing his college at National level.
    > p ^ q <- p and q are variables.
 
-   $ Variables that are used to represent propositions are called Propositional Variables.
+   : Variables that are used to represent propositions are called Propositional Variables.
