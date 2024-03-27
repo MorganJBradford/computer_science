@@ -15,16 +15,16 @@ Memory
 
    > Frequency: 2 GHz
    >> Time: 1/Frequency = 0.5 ns
-   >> = 1/2x10^9 = 0.5x10^-9 = 0.5 ns
+   >> = 1/2x10<sup>9</sup> = 0.5x10<sup>-9</sup> = 0.5 ns
    >>> How did we get the exponent?
 
 
 | Prefix | Units | Add Expressions  | Finaly Expressions         |
 |--------|-------|------------------|----------------------------|
-| 1 Kilo Unit    | 1000 Unit        | 10^3 <Unit> | 10^3 <Unit>  |
-| 1 Mega <Unit>  | 1000 Kilo <Unit> | 10^3 # 10^3 | 10^6 <Unit>  |
-| 1 Giga <Unit>  | 1000 Mega <Unit> | 10^6 # 10^3 | 10^9 <Unit>  |
-| 1 Tera <Unit>  | 1000 Giga <Unit> | 10^9 # 10^3 | 10^12 <Unit> |
+| 1 Kilo Unit    | 1000 Unit        | 10<sup>3</sup> <Unit> | 10<sup>3</sup> <Unit>  |
+| 1 Mega <Unit>  | 1000 Kilo <Unit> | 10<sup>3</sup> * 10<sup>3</sup> | 10<sup>6</sup> <Unit>  |
+| 1 Giga <Unit>  | 1000 Mega <Unit> | 10<sup>6</sup> * 10<sup>3</sup> | 10<sup>9</sup> <Unit>  |
+| 1 Tera <Unit>  | 1000 Giga <Unit> | 10<sup>9</sup> * 10<sup>3</sup> | 10<sup>12</sup> <Unit> |
 
 
 # Primary Memory:
