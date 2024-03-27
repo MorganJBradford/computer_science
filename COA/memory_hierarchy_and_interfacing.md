@@ -47,7 +47,7 @@ tags: []
 ##### H1 > H2 > H3
 
 ### This is known as Effective/Average Memory Acces Time (T avg):
-#### H1T1 + ((1-H1)*H2) T2 + ((1-H1) * (1-H2))T3
+#### H<sub>1</sub> T<sub>1</sub> + ((1-H<sub>1</sub>)*H<sub>2</sub>) T<sub>2</sub> + ((1-H<sub>1</sub>) * (1-H<sub>2</sub>))T<sub>3</sub>
 
      ^ Because the memory units are connected to the CPU simultaneously, which is why these checks will run in parallel.
      - So, the time taken to access the data will be the time taken to access the data from the memory unit which has the highest hit ratio.
@@ -61,4 +61,4 @@ tags: []
 ## CPU is connected to only one level of memory at a time.
 ## When the CPU wants to access the data, it will check in the memory unit which is connected to the CPU.
 ### Effective Memory Access Time (T avg):
-#### H1T1 + ((1-H1) * H2) (T1+T2) + ((1-H1) * (1-H2)) (T1+T2+T3)
+#### H<sub>1</sub>H<sub>1</sub> + ((1-H<sub>1</sub>) * H<sub>2</sub>) (H<sub>1</sub>+T<sub>2</sub>) + ((1-H<sub>1</sub>) * (1-H<sub>2</sub>)) (H<sub>1</sub>+T<sub>2</sub>+T<sub>3</sub>)
