@@ -46,11 +46,11 @@ tags: []
 #### H1, H2, H3
 ##### H1 > H2 > H3
 
-### This is known as Effective/Average Memory Acces Time (T avg):
-#### H<sub>1</sub> T<sub>1</sub> + ((1-H<sub>1</sub>)*H<sub>2</sub>) T<sub>2</sub> + ((1-H<sub>1</sub>) * (1-H<sub>2</sub>))T<sub>3</sub>
+### This is known as Effective/Average Memory Acces Time (T_{avg}):
+#### $H_1 T_1 + ((1-H_1)\cdot H_2) T_2 + ((1-H_1) \cdot (1-H_2))T_3$
 
-     ^ Because the memory units are connected to the CPU simultaneously, which is why these checks will run in parallel.
-     - So, the time taken to access the data will be the time taken to access the data from the memory unit which has the highest hit ratio.
+^ Because the memory units are connected to the CPU simultaneously, which is why these checks will run in parallel.
+- So, the time taken to access the data will be the time taken to access the data from the memory unit which has the highest hit ratio.
 
      > Total no. of Instructions = 100
      > No. of Instructions found in nth level = 80
@@ -61,4 +61,19 @@ tags: []
 ## CPU is connected to only one level of memory at a time.
 ## When the CPU wants to access the data, it will check in the memory unit which is connected to the CPU.
 ### Effective Memory Access Time (T avg):
-#### H<sub>1</sub>H<sub>1</sub> + ((1-H<sub>1</sub>) * H<sub>2</sub>) (H<sub>1</sub>+T<sub>2</sub>) + ((1-H<sub>1</sub>) * (1-H<sub>2</sub>)) (H<sub>1</sub>+T<sub>2</sub>+T<sub>3</sub>)
+#### $H_1H_1 + ((1-H_1) \cdot H_2) (H_1+T_2) + ((1-H_1) \cdot (1-H_2)) (H_1+T_2+T_3)$
+
+## Memory Interfacing - Solved PYQs
+
+Q1: A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
+
+## Solutions
+### Solution 1:
+
+Assume both the cache and main memory are simultaneously connected to the proccesor.
+
+| Access Time | Hit Ratio |
+|-------------|-----------|
+| $T_{cache} = 30 \ ns$ | $H_{cache}$ = 80% = 0.8 |
+| $T_{MM} = 150 \ ns$ |
+| $T_{avg} = H_{cache}\ T_{cache} + (1-H_{cache})\ T_{MM} \\ = 0.8 \cdot 30 (1-0.8)\cdot150 \ ns \\ = 24 + 0.2 \cdot 150$ |

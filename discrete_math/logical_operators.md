@@ -4,7 +4,7 @@ aliases: []
 tags: []
 ---
 
-_Negation, Conjunction, and Disjunction_
+# _Negation, Conjunction, and Disjunction_
 
 There are 6 logical operators that wel will focus on:
 
@@ -81,11 +81,11 @@ Case 4: If you do not study hard and you do not pass the exam, then the statemen
 > p = F, q = F
 > p -> q = T
 
-u Golden Rule:
-## If the hypothesis is FALSE, then the statement is always TRUE.
-### p -> q = T, when p = F
+## Golden Rule:
+### If the hypothesis is FALSE, then the statement is always TRUE.
+#### p -> q = T, when p = F
 
-_Implication_ - _ Representations_
+# _Implication_ - _Representations_
 Different Ways to represent conditional statements:
 
 - "if p then q"
@@ -98,8 +98,8 @@ Different Ways to represent conditional statements:
     - "p is sufficient for q"
     - "q unless ~p"
 
-# "p only if q"
-> how "if p then q" and "p only if q" can be the same? \
+## "p only if q"
+### how "if p then q" and "p only if q" can be the same? \
 > "I will stay home only if I'm sick."
 >> let p = "I will stay at home" and q = "I'm sick" \
 >> p only if q = p -> q
@@ -109,7 +109,7 @@ Different Ways to represent conditional statements:
 > The only way to falsify the above statement is by making p TRUE and q FALSE. \
 > Therefore, p only if q is equivalent to if p then q.
 
-> Why "p only if q" is not equivalent to "if q then p"? \
+### Why "p only if q" is not equivalent to "if q then p"? \
 > "I will stay home only if I'm sick."
 >> p = "I will stay at home" and q = "I'm sick"
 >>> Proof: p only if q is FALSE when p is TRUE and q is FALSE.
@@ -130,3 +130,65 @@ As when p is TRUE and q is FALSE, "p only if q" is FALSE but same TRUE values of
 Therefore, "p only if q" is not equivalent to "if q then p".
 
 q is the necessary condition for p. So if q is FALSE, then p has to be FALSE.
+
+## "q is necessary for p"
+
+> Example: "Good food is necessary to keep us alive"
+>> According to this statement, if we don't have good food then we will die.
+>> However, is this the only factor keeping us alive? No.
+>>> Example: "My friend died at the age of 16 and he has no shortage of good food".
+>>> Even though he has good food, he still died.
+
+>> Therefore, when we say A is necossary for B then falsity of A guarantees the falsity of B but _we cannot guarentee_ the _truth_ of B from the truth of A.
+>> Similarly, when we say q is necessary for p, then we can only guarentee that when q is false, then p is definitely false.
+
+## "p is sufficient for q"
+
+> Example: "It is sufficient for you to travel by car in order to reach your destination on time."
+>> Definitely, if you travel by car, you'll reach your destination on time. No doubt.
+>> But if you won't travel by car, does it mean you'll never reach your destination on time? May be by flight or other means of transport you'll reach your destination much earlier.
+> Therefore, when we say that when A is sufficient for B then, trueth of A guarantees the thruth of B but _we cannot guarentee_ the _falsity_ of B from the falsity of A.
+> Similarly, when we say the "p is sufficient for q", then we can only guarentee that when p is true, then q is definitely true.
+
+### why is p not necessary for q?
+
+| p | q | p -> q |
+|---|---|--------|
+| T | T |   T    |
+| T | F |   F    |
+| F | T |   T    |
+| F | F |   T    |
+
+Proof by contradiction:
+> Let say p is necessary for q.
+> if p is really necessary for q then if p is false then it is mandatory for q to be false in order to make the whole compound proposition p->q true. But it is not the case.
+> According te the truth table it is not mandatory for q to be false when p is false. Hence "p is no necessary for q".
+
+### Why is q not sufficient for p?
+
+| p | q | p -> q |
+|---|---|--------|
+| T | T |   T    |
+| T | F |   F    |
+| F | T |   T    |
+| F | F |   T    |
+
+Proof by contradiction:
+> Let say q is sufficient for p.
+> if q is really sufficient for p then if q is true then it is mandatory for p to be true in order to make the whole compound proposition p->q true. But it is not the case.
+> According te the truth table it is not mandatory for p to be true when q is true. Hence "q is no sufficient for p".
+
+## "q unless ~p"
+unless
+: 'expect if'
+
+> _Evolution steps_:
+>> "if p then q" (if p is true then q must be true)
+>>      V
+>> "q is true when p is true"
+>>      V
+>> "q is true except when p is false"
+>>      V
+>> "q is true unless p is false" = "q unless ~p"
+
+# _Imlication_, _Converse_, _Contrapositive_, and _Inverse_
