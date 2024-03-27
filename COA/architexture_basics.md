@@ -1,27 +1,30 @@
-$$ Computer Archicecture:
-It is the design of computers, including their instruction sets, hardware components and system organization.
-$$
+---
+id: architexture_basics
+aliases: []
+tags: []
+---
+
+Computer Archicecture:
+: It is the design of computers, including their instruction sets, hardware components and system organization.
 
 There are two main components of computer architecture:
 1. Instruction Set Architecture (ISA)
 2. Hardware System Architecture (HSA)
 
-$$ Instruction Set Architecture (ISA):
-The interface between the hardware and the software. It is the set of instructions that a computer can execute. It is the most important abstraction in computer architecture.
-It is the boundary between the hardware and the software. It is the contract between the hardware and the software
-$$
+Instruction Set Architecture (ISA):
+: The interface between the hardware and the software. It is the set of instructions that a computer can execute. It is the most important abstraction in computer architecture.
+: It is the boundary between the hardware and the software. It is the contract between the hardware and the software
 
-$$ Hardware System Architecture (HSA):
-It is the actual hardware implementation of the computer. It includes the components like CPU, memory, I/O devices, etc.
-$$
+Hardware System Architecture (HSA):
+: It is the actual hardware implementation of the computer. It includes the components like CPU, memory, I/O devices, etc.
 
 Instruction Set Architecture:
-@code assembly
+```
 MOV R1, O2H
 MOV r2, 03H
 ADD R1, R2
 STORE X, R1
-@end
+```
 
 Hardware System Architecture:
 ADDER
@@ -42,5 +45,5 @@ _History_
 >> Proposed the Von Neumann Architecture
 >>> Offered Turing a research assistant position under his supervision in quantum mechanics at the intitute of advanced studies
 
-Family Tree of Computer Science - Professor Brailsford:
+Family Tree of Computer Science - Professor Brailsford: \
 ???? "If Turing is the father and and Babbage is the grandfather, Ada Lovelace is the great aunt, Neumann was the impossibley rich and clever uncle of computer science."

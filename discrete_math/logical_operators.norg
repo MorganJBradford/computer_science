@@ -83,3 +83,26 @@ Case 4: If you do not study hard and you do not pass the exam, then the statemen
 ** If the hypothesis is false, then the statement is always true.
 *** p -> q = T, when p = F
 
+    _Implication_ - _ Representations_
+Different Ways to represent conditional statements:
+
+    - "if p then q"
+    - "p implies q"
+    - "q when p"
+    - "q whenever p"
+    - "q follows from p"
+    - "p only if q"
+    - "q is necessary for p"
+    - "p is sufficient for q"
+    - "q unless ~p"
+
+* "p only if q"
+  > how "if p then q" and "p only if q" can be the same?
+  > "I will stay home only if I'm sick."
+  >> let p = "I will stay at home" and q = "I'm sick"
+  >> p only if q = p -> q
+  >>> According to the above statement, becoming sick is the necessary condition for staying at home.
+  > Proof idea: trueth value of p and q must be the same in order to falsify the compound proposition.
+  > *if p then q* "If I stay at home, then I'm sick."
+
+
