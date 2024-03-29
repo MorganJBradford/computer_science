@@ -61,7 +61,7 @@ tags: []
 ## CPU is connected to only one level of memory at a time.
 ## When the CPU wants to access the data, it will check in the memory unit which is connected to the CPU.
 ### Effective Memory Access Time (T avg):
-#### $H_1H_1 + ((1-H_1) \cdot H_2) (H_1+T_2) + ((1-H_1) \cdot (1-H_2)) (H_1+T_2+T_3)$
+#### $H_1T_1 + ((1-H_1) \cdot H_2) (H_1+T_2) + ((1-H_1) \cdot (1-H_2)) (H_1+T_2+T_3)$
 
 ## Memory Interfacing - Solved PYQs
 
@@ -88,7 +88,9 @@ Assume only one memory unit is connected to the CPU at a time.
 |-------------|-----------|
 | $T_{cache} = 30 \ ns$ | $H_{cache}$ = 80% = 0.8 |
 | $T_{MM} = 150 \ ns$ |
-| $T_{avg} = H_{cache}T_{cache} + (1-H_{cache})(T_{cache}+T_{MM}) \\ = 0.8 \cdot 30 + (1-0.8)(30+150) \ ns \\ = 24 + 0.2 \cdot 180 = 24 + 36 = 60\ ns$ |
+| $T_{avg} = H_{cache}T_{cache} + (1-H_{cache})(T_{cache}+T_{MM})$ |
+| $= 0.8 \cdot 30 + (1-0.8)(30+150) \ ns$ |
+| $= 24 + 0.2 \cdot 180 = 24 + 36 = 60\ ns$ |
 
 Q2:
 > Assume that for a certain processor, a read request takes 50 ns on a cache miss and 5 ns on a cache hit.
@@ -97,6 +99,8 @@ Q2:
 
 | Access Time | Hit Ratio |
 |-------------|-----------|
-| $T_{cache}+T{MM} = 50\ ns$ | $H_{cache}$ = 80% = 0.8 |
+| $T_{cache}+T_{MM} = 50\ ns$ | $H_{cache}$ = 80% = 0.8 |
 | $T_{cache} = 5\ ns$ |
-| $H_{cache}T_{cache} + (1-H_{cache})(T_{cache}+T_{MM}) \\ = 0.8 \cdot 5 + (1-0.8)\cdot 50\ ns \\ = 4 + 0.2 \cdot 50 = 4 + 10 = 14\ ns$ |
+| $T_{avg} = H_{cache}T_{cache} + (1-H_{cache})(T_{cache}+T_{MM})$ |
+| $= 0.8 \cdot 5 + (1-0.8)\cdot 50\ ns$ |
+| $= 4 + 0.2 \cdot 50 = 4 + 10 = 14\ ns$ |

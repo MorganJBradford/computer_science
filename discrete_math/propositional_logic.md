@@ -37,17 +37,17 @@ These types of problems can be very easily solved using propositional logic.
 
    : area of logic that studies ways of _joining_ and/or _modifying_ propositions to form more complicated propositions and it also studios the _logical relationships_ and _properties_ derived from these combined/altered propesitions.
 
-   ## Compound Propositions:
+## Compound Propositions:
 ### Why do we need compound propositions?
 #### To express more complex ideas.
 #### To express relationships between simple propositions.
 
-   # Propositional Variables:
+# Propositional Variables:
 ## Which on of the following is convenient to express:
-   > "Adam is good in playing football and this time he is representing his college at National level."
+> "Adam is good in playing football and this time he is representing his college at National level."
 OR
-   > if p = Adam is good in playing football
-   > q = this time he si representing his college at National level.
-   > p ^ q <- p and q are variables.
+> if p = Adam is good in playing football
+> q = this time he si representing his college at National level.
+> p ^ q <- p and q are variables.
 
-   : Variables that are used to represent propositions are called Propositional Variables.
+: Variables that are used to represent propositions are called Propositional Variables.

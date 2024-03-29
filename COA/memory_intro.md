@@ -13,10 +13,11 @@ Memory
 # Should we have one giant block of memory or should we have multiple blocks of memory?
 ## As the size of memory increases, the time taken to access the memory also increases. So, we have multiple blocks of memory.
 
-   > Frequency: 2 GHz
-   >> Time: $\frac 1{Frequency} = 0.5\ ns \\$
-   >> $= 1/2x10^9 = 0.5x10^-9 = 0.5 ns\ $
-   >>> How did we get the exponent?
+> Frequency: 2 GHz
+>> Time: $\frac 1{Frequency} = 0.5 ns$
+>>
+>> $= 1/2x10^9 = 0.5x10^-9 = 0.5 ns$
+>>> How did we get the exponent?
 
 
 | Prefix | Units | Add Expressions  | Final Expressions         |
