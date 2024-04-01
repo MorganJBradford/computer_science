@@ -16,17 +16,20 @@ tags:
     - Each core has its own L1 cache. All cores share the L2 cache. The L3 cache is shared by all cores.
 
 ## L1 Cache
+?
 - Embedded in the processor chip.
 - Fastest cache memory.
 - Smallest in size.
 
 ## L2 Cache
+?
 - Initially incorporated in the motherboard.
 - Now embedded in the processor chip.
 - Different processor cores have their own L2 caches.
 - Used to store data that is frequently accessed which are second in priority and which cannot be incorporated in L1 due to space limitation.
 
 ## L3 Cache (Shared Cache)
+?
 - Embedded in the processor.
 - Shared by all cores.
 - Largest in size.

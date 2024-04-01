@@ -1,22 +1,23 @@
 ---
 id: architexture_basics
 aliases: []
-tags: []
+tags:
+  - flashcards/computer_architecture/basics
 ---
 
-Computer Archicecture:
-: It is the design of computers, including their instruction sets, hardware components and system organization.
+Computer Archicecture::It is the design of computers, including their instruction sets, hardware components and system organization.
 
 There are two main components of computer architecture:
+?
 1. Instruction Set Architecture (ISA)
 2. Hardware System Architecture (HSA)
 
-Instruction Set Architecture (ISA):
-: The interface between the hardware and the software. It is the set of instructions that a computer can execute. It is the most important abstraction in computer architecture.
-: It is the boundary between the hardware and the software. It is the contract between the hardware and the software
+Instruction Set Architecture (ISA)
+?
+- The interface between the hardware and the software. It is the set of instructions that a computer can execute. It is the most important abstraction in computer architecture.
+- It is the boundary between the hardware and the software. It is the contract between the hardware and the software
 
-Hardware System Architecture (HSA):
-: It is the actual hardware implementation of the computer. It includes the components like CPU, memory, I/O devices, etc.
+Hardware System Architecture (HSA)::It is the actual hardware implementation of the computer. It includes the components like CPU, memory, I/O devices, etc.
 
 Instruction Set Architecture:
 ```

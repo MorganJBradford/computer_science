@@ -1,27 +1,28 @@
 ---
 id: memory_hierarchy_and_interfacing
 aliases: []
-tags: []
+tags:
+  - flashcards/memory/memory_hierarchy_and_interfacing
 ---
 
 # Memory Hierarchy
 
 ## Access Time | Size
-   >>>> Registers
-   >>> S.R.A.M
-   >> Main Memory
-   >> D.R.A.M
-   > Secondary Memory
+>>>> Registers
+>>> S.R.A.M
+>> Main Memory
+>> D.R.A.M
+> Secondary Memory
 
 ## Cost | Usage Frequency
-   >>>> Secondary Memory
-   >>> Main Memory
-   >>> D.R.A.M
-   >> S.R.A.M
-   > Registers
+>>>> Secondary Memory
+>>> Main Memory
+>>> D.R.A.M
+>> S.R.A.M
+> Registers
 
 # Memory Interfacing:
-  - Part of Computer Organization.
+- Part of Computer Organization.
   - Deals with the way of connecting various level of Memory units to Processor & I/O peripherals.
   - The speed of the processor is counted using the unit MIPS.
 
@@ -65,25 +66,18 @@ tags: []
 
 ## Memory Interfacing - Solved PYQs
 
-Q1:
->A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
-
-## Solutions
-### Solution 1:
-
+### A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
+?
+#### Solution 1:
 Assume both the cache and main memory are simultaneously connected to the proccesor.
-
 | Access Time | Hit Ratio |
 |-------------|-----------|
 | $T_{cache} = 30 \ ns$ | $H_{cache}$ = 80% = 0.8 |
 | $T_{MM} = 150 \ ns$ |
 | $T_{avg} = H_{cache}T_{cache} + (1-H_{cache})T_{MM} \\ = 0.8 \cdot 30 + (1-0.8)\cdot150 \ ns \\ = 24 + 0.2 \cdot 150 = 54\ ns$ |
-
-### Solution 2:
-
+#### Solution 2:
 Assume only one memory unit is connected to the CPU at a time.
 - Level wise organization
-
 | Access Time | Hit Ratio |
 |-------------|-----------|
 | $T_{cache} = 30 \ ns$ | $H_{cache}$ = 80% = 0.8 |
@@ -92,11 +86,11 @@ Assume only one memory unit is connected to the CPU at a time.
 | $= 0.8 \cdot 30 + (1-0.8)(30+150) \ ns$ |
 | $= 24 + 0.2 \cdot 180 = 24 + 36 = 60\ ns$ |
 
-Q2:
-> Assume that for a certain processor, a read request takes 50 ns on a cache miss and 5 ns on a cache hit.
-> Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit.
-> The average read access time in ns is:
 
+### Assume that for a certain processor, a read request takes 50 ns on a cache miss and 5 ns on a cache hit.
+Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit.
+The average read access time in ns is:
+?
 | Access Time | Hit Ratio |
 |-------------|-----------|
 | $T_{cache}+T_{MM} = 50\ ns$ | $H_{cache}$ = 80% = 0.8 |
@@ -104,3 +98,18 @@ Q2:
 | $T_{avg} = H_{cache}T_{cache} + (1-H_{cache})(T_{cache}+T_{MM})$ |
 | $= 0.8 \cdot 5 + (1-0.8)\cdot 50\ ns$ |
 | $= 4 + 0.2 \cdot 50 = 4 + 10 = 14\ ns$ |
+
+
+## Memory Hierarchy: Access Time | Size
+?
+1. Registers
+2. S.R.A.M
+3. Main Memory (D.R.A.M)
+4. Secondary Memory
+
+## Memory Hierarchy: Cost | Usage Frequency
+?
+1. Secondary Memory
+2. Main Memory D.R.A.M
+3. S.R.A.M
+4. Registers
