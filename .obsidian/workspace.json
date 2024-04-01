@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "discrete_math/propositional_logic.md",
+                "file": "COA/cache_memory_intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "discrete_math/propositional_logic.md",
+                "file": "COA/cache_memory_intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "discrete_math/propositional_logic.md",
+                "file": "COA/cache_memory_intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "discrete_math/propositional_logic.md"
+                "file": "COA/cache_memory_intro.md"
               }
             }
           },
@@ -158,8 +158,16 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "d62d69c10cae23d3",
+  "active": "1debc97c54076b62",
   "lastOpenFiles": [
+    "COA/cache_memory_intro.md~",
+    "COA/4913",
+    "COA/1711988428-VCMQ.md",
+    "COA/architexture_basics.md",
+    "COA/cache_memory_intro.md",
+    "COA/memory_hierarchy_and_interfacing.md",
+    "COA/index.md",
+    "discrete_math/propositional_logic.md",
     "discrete_math/propositional_logic.md~",
     "discrete_math/4913",
     "discrete_math/logical_operators.md"
