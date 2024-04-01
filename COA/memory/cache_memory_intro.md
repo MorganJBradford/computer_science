@@ -2,7 +2,7 @@
 id: cache_memory_intro
 aliases: []
 tags:
-  - flashcards/cache
+  - flashcards/memory/cache
 ---
 
 # Cache Memory

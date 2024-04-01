@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "COA/cache_memory_intro.md",
+                "file": "COA/memory/memory_intro.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COA/cache_memory_intro.md",
+                "file": "COA/memory/memory_intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COA/cache_memory_intro.md",
+                "file": "COA/memory/memory_intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "COA/cache_memory_intro.md"
+                "file": "COA/memory/memory_intro.md"
               }
             }
           },
@@ -160,6 +160,8 @@
   },
   "active": "1debc97c54076b62",
   "lastOpenFiles": [
+    "COA/memory/4913",
+    "COA/memory/memory_intro.md~",
     "COA/cache_memory_intro.md~",
     "COA/4913",
     "COA/1711988428-VCMQ.md",
