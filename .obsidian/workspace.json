@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "COA/memory/direct_memory_mapping.md",
+                "file": "discrete_math/logical_operators.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COA/memory/direct_memory_mapping.md",
+                "file": "discrete_math/logical_operators.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COA/memory/direct_memory_mapping.md",
+                "file": "discrete_math/logical_operators.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "COA/memory/direct_memory_mapping.md"
+                "file": "discrete_math/logical_operators.md"
               }
             }
           },
@@ -150,7 +150,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -165,15 +166,17 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "6c30a7e162409a85",
+  "active": "1debc97c54076b62",
   "lastOpenFiles": [
+    "discrete_math/logical_operators.md~",
+    "discrete_math/4913",
+    "COA/memory/direct_memory_mapping.md",
     "COA/architecture/4913",
     "COA/architecture/flashcards.md",
     "COA/flashcards",
     "COA/memory/4913",
     "COA/memory/direct_memory_mapping.md~",
     "COA/memory/cache_memory_intro.md",
-    "COA/memory/direct_memory_mapping.md",
     "COA/architecture/architexture_basics.md~",
     "COA/architecture/archiceture_classifications.md~",
     "COA/memory/memory_hierarchy_and_interfacing.md",
@@ -181,7 +184,6 @@
     "COA/memory/memory_hierarchy_and_interfacing.md~",
     "COA/memory/memory_intro.md",
     "COA/4913",
-    "COA/memory/memory_intro.md~",
     "COA/1711988428-VCMQ.md",
     "COA/architexture_basics.md",
     "COA/cache_memory_intro.md",
