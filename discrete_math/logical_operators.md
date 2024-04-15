@@ -217,7 +217,7 @@ Facts:
 
 
 
-# Biconditional Operator
+## Biconditional Operator
 
 Definition: let p and q be two propositions. The biconditional statement of the form $p \iff q$ is the proposition "$p\ if\ and\ only\ if\ q$".
 $p \iff q$ is true whenever the truth values of p and q are the same.
@@ -242,3 +242,7 @@ Representations:
 1. p is necessary and sufficient for q and vice versa
 2. if p then q, and conversely
 3. p iff q
+
+Example: let p be a proposition "You get promoted" and let q be a proposition "You have connections"
+
+then $p \iff q$ = "You get promoted if and only if you have connections."
