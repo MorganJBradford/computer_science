@@ -1,8 +1,7 @@
 ---
 id: archiceture_classifications
 aliases: []
-tags:
-  - flashcards/computer_architecture/classifications
+tags: []
 ---
 
 # Von-Neumann Architecture (Princeton Architecture)

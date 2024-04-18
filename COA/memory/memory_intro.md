@@ -1,8 +1,7 @@
 ---
 id: memory_intro
 aliases: []
-tags:
-  - flashcards/memory/intro
+tags: []
 ---
 
 Memory::The faculty of the brain by which data or information is encoded, stored, and retrieved when needed -- Wikipedia

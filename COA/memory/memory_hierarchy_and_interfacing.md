@@ -1,8 +1,7 @@
 ---
 id: memory_hierarchy_and_interfacing
 aliases: []
-tags:
-  - flashcards/memory/memory_hierarchy_and_interfacing
+tags: []
 ---
 
 # Memory Hierarchy
@@ -26,7 +25,7 @@ tags:
   - Deals with the way of connecting various level of Memory units to Processor & I/O peripherals.
   - The speed of the processor is counted using the unit MIPS.
 
-  $ MIPS: Million Instructions Per Second
+MIPS: Million Instructions Per Second
 
   nth Level ⊆ (n+1)th Level
 
