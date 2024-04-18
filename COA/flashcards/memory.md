@@ -148,7 +148,7 @@ Given the following values please provide the calculation for determining the nu
 | __...__ | ... | ... | ... | ... |
 | __15:__ | 60 | 61 | 62 | 63 |
 ?
-In this example we have 64 words, or $log_2\ 64 = log_2\ 2^6 = 6$ bits to address each block.
+In this example we have 64 words, or $log_2\ 64 = log_2\ 2^6 = 6\ bits$ to address each block.
 
 #flashcards/memory/direct_memory_mapping
 Natural Log equivalent to Log base 2::$ln(n)\div ln(2) = log_2\ n$\
@@ -174,7 +174,7 @@ Given the following values, how many bits are required to address each block?
 | __...__ | ... | ... | ... | ... |
 | __15:__ | 60 | 61 | 62 | 63 |
 ?
-In this example we have 16 blocks, or $log_2\ 16 = log_2\ 2^4 = 4$ bits to address each block.
+In this example we have 16 blocks, or $log_2\ 16 = log_2\ 2^4 = 4\ bits$ to address each block.
 
 #flashcards/memory/direct_memory_mapping #flashcards/memory/dmm_examples
 If the processor generates the following address: 011111, which word of which block is being addressed?
@@ -213,7 +213,7 @@ Given the following values, how many bits are needed to address each line?
 - Line size: 4 words
 - No. of Lines in Cache: 16/4 = 4
 ?
-$log_2\ 4 = log_2\ 2^2 = 2$ bits
+$log_2\ 4 = log_2\ 2^2 = 2\ bits$
 
 #flashcards/memory/direct_memory_mapping
 All the main memory blocks can't be assigned to all the cache lines at once.
@@ -257,14 +257,14 @@ Cache Size: 1MB
 Block Size: 4 KB
 ?
 MM Size = $4\ GB = 2^2 \cdot 2^{30}\ B = 2^{2+30} B = 2^{32}\ B$
-- No. of P.A. bits = $log_2\ 2^{32} = 32$ bits
+- No. of P.A. bits = $log_2\ 2^{32} = 32\ bits$
 - Block Size = $4\ KB = 2^2 \cdot 2^{10}\ B = 2^{2+10} B = 2^{12}\ B$
-- Block Offset = $log_2\ 2^{12} = 12$ bits
+- Block Offset = $log_2\ 2^{12} = 12\ bits$
 - No. of Blocks in MM = $\frac{2^{32}}{2^{12}} = 2^{32-12} = 2^{20}$
-- Block number bits = $log_2\ 2^{20} = 20$ bits
+- Block number bits = $log_2\ 2^{20} = 20\ bits$
 - Cache Size = $1\ MB = = 1 \cdot 2^{20}\ B = 2^{20}\ B$
 - No. of Lines in Cache = $\frac{2^{20}}{2^{12}} = 2^{20-12} = 2^8$
-- No. of Tag Bits: P.A. bits - (Line no. bits + offset) = $32 - (8 + 12) = 32 - 20 = 12$ bits
+- No. of Tag Bits: P.A. bits - (Line no. bits + offset) = $32 - (8 + 12) = 32 - 20 = 12\ bits$
 
 #flashcards/memory/direct_memory_mapping
 What is a Tag Directory?
@@ -279,7 +279,7 @@ MM Size: 4GB
 Cache Size: 1MB
 Block Size: 4 KB
 ?
-- Tag Directory Size = No. of entries $\cdot$ Tag bits = $2^8 \cdot 12 = 3072$ bits
+- Tag Directory Size = No. of entries $\cdot$ Tag bits = $2^8 \cdot 12 = 3072\ bits$
 
 #flashcards/memory/direct_memory_mapping
 Given the following values, what is the number of tag bits?
@@ -291,7 +291,7 @@ Word Size: 1 Byte
 - Tag bits: Identifies the MM block residing in the Cache Line.
 - MM Size = $256\ MB = 2^8 \cdot 2^{20}\ B = 2^{8+20} B = 2^{28}\ B$
 - Cache Size = $512\ KB = 2^9 \cdot 2^{10}\ B = 2^{9+10} B = 2^{19}\ B$
-- No of Tag Bits: $log_2({2^{28}}\div{2^{19}}) = 9$ bits
+- No of Tag Bits: $log_2({2^{28}}\div{2^{19}}) = 9\ bits$
 
 #flashcards/memory/direct_memory_mapping
 Given the following values, what is the cache size?
@@ -300,30 +300,27 @@ Block Size: 16 KB
 No. of Tag bits: 10
 ?
 MM Size = 16 GB = $2^4 \cdot 2^{30}\ B = 2^{4+30} B = 2^{34}\ B$
-No. of P.A. bits = $log_2\ 2^{34} = 34$ bits
+No. of P.A. bits = $log_2\ 2^{34} = 34\ bits$
 Block Size = 16 KB = $2^4 \cdot 2^{10}\ B = 2^{4+10} B = 2^{14}\ B$
-Block Offset = $log_2\ 2^{14} = 14$ bits
+Block Offset = $log_2\ 2^{14} = 14\ bits$
 No. of Line Number Bits: P.A. Bits - (tag bits + offset) = 34 - (10 + 14) = 34 - 24 = 10 bits
 No. of Cache Lines = 2^10
 Line Size = 2^14 B
 Cache Size = 2^10 $\cdot$ 2^14 B = 2^24 B = 16 MB
 
-#flashcards/memory_and_interfacing
+#flashcards/memory/memory_hierarchey_and_interfacing
 # Memory Interfacing:
 ?
 - Part of Computer Organization.
   - Deals with the way of connecting various level of Memory units to Processor & I/O peripherals.
   - The speed of the processor is counted using the unit MIPS.
 
-#flashcards/memory_and_interfacing
+#flashcards/memory/memory_hierarchey_and_interfacing
 What does MIPS stand for?::Million Instructions Per Second
 
-#flashcards/memory_and_interfacing
-Method 1 of interfacing:
+#flashcards/memory/memory_hierarchey_and_interfacing
+If our CPU is connected to multiple levels of memory simultaneously, how would we calculate the average memory access time for the following?
 ?
-## CPU is connected to all levels of memory simultaneously.
-## When the CPU wants to access the data, it will check in all levels of memory.
-
 ### If we have memory units: M1, M2, M3
 ### Acces Time:
 #### T1, T2, T3
@@ -331,10 +328,8 @@ Method 1 of interfacing:
 ### Hit Ratio:
 #### H1, H2, H3
 ##### H1 > H2 > H3
-This is know as what?
 ?
-### Effective/Average Memory Acces Time (T_{avg}):
-#### $H_1 T_1 + ((1-H_1)\cdot H_2) T_2 + ((1-H_1) \cdot (1-H_2))T_3$
+$H_1 T_1 + ((1-H_1)\cdot H_2) T_2 + ((1-H_1) \cdot (1-H_2))T_3$\
 ^ Because the memory units are connected to the CPU simultaneously, which is why these checks will run in parallel.
 - So, the time taken to access the data will be the time taken to access the data from the memory unit which has the highest hit ratio.
      > Total no. of Instructions = 100
@@ -342,25 +337,26 @@ This is know as what?
      > MM's Hit Ratio = 80/100 = 0.8 = 80%
 
 
-#flashcards/memory_and_interfacing
-Method 2 of interfacing:
+#flashcards/memory/memory_hierarchey_and_interfacing
+If our CPU is connected to only one level of memory at a time, how would we calculate the average memory access time for the following?
 ?
-## CPU is connected to only one level of memory at a time.
-## When the CPU wants to access the data, it will check in the memory unit which is connected to the CPU.
-### Effective Memory Access Time (T avg):
-#### $H_1T_1 + ((1-H_1) \cdot H_2) (H_1+T_2) + ((1-H_1) \cdot (1-H_2)) (H_1+T_2+T_3)$
+$H_1T_1 + ((1-H_1) \cdot H_2) (H_1+T_2) + ((1-H_1) \cdot (1-H_2)) (H_1+T_2+T_3)$
 
-#flashcards/memory_and_interfacing
+#flashcards/memory/memory_hierarchey_and_interfacing
 ### A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
+#### Parallel Organization
 ?
-#### Solution 1:
 Assume both the cache and main memory are simultaneously connected to the proccesor.
 | Access Time | Hit Ratio |
 |-------------|-----------|
 | $T_{cache} = 30 \ ns$ | $H_{cache}$ = 80% = 0.8 |
 | $T_{MM} = 150 \ ns$ |
 | $T_{avg} = H_{cache}T_{cache} + (1-H_{cache})T_{MM} \\ = 0.8 \cdot 30 + (1-0.8)\cdot150 \ ns \\ = 24 + 0.2 \cdot 150 = 54\ ns$ |
-#### Solution 2:
+
+#flashcards/memory/memory_hierarchey_and_interfacing
+### A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
+#### Level wise organization
+?
 Assume only one memory unit is connected to the CPU at a time.
 - Level wise organization
 | Access Time | Hit Ratio |
@@ -371,7 +367,7 @@ Assume only one memory unit is connected to the CPU at a time.
 | $= 0.8 \cdot 30 + (1-0.8)(30+150) \ ns$ |
 | $= 24 + 0.2 \cdot 180 = 24 + 36 = 60\ ns$ |
 
-#flashcards/memory_and_interfacing
+#flashcards/memory/memory_hierarchey_and_interfacing
 ### Assume that for a certain processor, a read request takes 50 ns on a cache miss and 5 ns on a cache hit.
 Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit.
 The average read access time in ns is:
@@ -384,7 +380,7 @@ The average read access time in ns is:
 | $= 0.8 \cdot 5 + (1-0.8)\cdot 50\ ns$ |
 | $= 4 + 0.2 \cdot 50 = 4 + 10 = 14\ ns$ |
 
-
+#flashcards/memory/memory_hierarchey_and_interfacing
 ## Memory Hierarchy: Access Time | Size
 ?
 1. Registers
@@ -392,9 +388,73 @@ The average read access time in ns is:
 3. Main Memory (D.R.A.M)
 4. Secondary Memory
 
+#flashcards/memory/memory_hierarchey_and_interfacing
 ## Memory Hierarchy: Cost | Usage Frequency
 ?
 1. Secondary Memory
 2. Main Memory D.R.A.M
 3. S.R.A.M
 4. Registers
+
+#flashcards/memory/dmm_pyqs
+A direct mapped cache memory of 1 MB has a block size of 256 bytes.
+The cache has an access time of 3 ns and a hit rate of 94%. During a cache miss, it takes 20 ns to bring the first word of a block from the main memory, while each subsequent word takes 5 ns.
+The word size is 64 bits. The average memory access time in ns (round of to 1 decimal place) is:
+?
+Block Size = 256 B
+Word Size = 64 bits = $8 \cdot 8 bits = 8 B$\
+No of words per Block = $256\ B \div 8\ B = 2^8 \div 2^3 = 2^{8-3} = 2^5$
+$H_{cache} = 94\% = 0.94$\
+$T_{cache} = 3\ ns$\
+$T_{MM} = 20 ns for the 1st word, 5\ ns for the rest (for every block)$\
+$T_{avg} = H_{cache}T_{cache} + (1-H_{cache})(T_{cache} + T_{MM})$\
+$= 0.94 \cdot 3 + (1 - 0.94)(3+((20 \cdot 1) + ((2^5 - 1) \cdot 5)))\ ns$\
+$= 2.82 + 0.06(3 + 20 + 155)\ ns = 2.82 + 0.06(178)\ ns$\
+$= 2.82 + 10.68 = 13.5\ ns$\
+Answer: 13.5 ns
+
+#flashcards/memory/dmm_pyqs
+Consider a machine with byte addressable main memory of $2^{20}\ bytes$, block size of 16 bytes and a direct mapped cache having $2^{12}$ cache lines.
+Let the addresses of two consecutive bytes in main memory be $(E201F)_{16}$ and $(E2020)_{16}$.
+The cache index for the memory address $(E201F)_{16}$.
+What are the tag and cache line address (in hex) for main memory address $(E201F)_{16}$?
+?
+Main Memory Size = $2^{20}\ bytes$\
+Block Size = 16 bytes\
+No. of P.A. bits = $log_2\ 2^{20} = 20\ bits$\
+Block Offset = $log_2\ 16 = 4\ bits$\
+No. of Cache Lines = $2^{12}$\
+No of Line number bits= $log_2\ 2^{12} = 12\ bits$\
+No of Tag bits = P.A. bits - (Line no. bits + offset) = $20 - (12 + 4) = 20 - 16 = 4\ bits$
+$E201F_{16} = 1110\ 0010\ 0000\ 0001\ 1111_2$\
+Tag in Hex = $1110 = E$\
+Cache line address in hex = $0010\ 0000\ 0001 = 201$\
+
+#flashcards/memory/dmm_pyqs
+Consider a machine with byte addressable memory of $2^{32}\ bytes$ divided into blocks of size 32 bytes. Assume a direct mapped cache having 512 cache lines is used with this machine. The size of tag field bits is:
+?
+Main Memory Size = $2^{32}\ bytes$\
+No. of P.A. bits = $log_2\ 2^{32} = 32\ bits$\
+Block Size = 32 B = $2^5\ bytes$\
+No. of cache lines = 512 = $2^9$\
+No of Line number bits = $log_2\ 2^9 = 9\ bits$
+No of Tag bits = P.A. bits - (Line no. bits + offset) = $32 - (9 + 5) = 32 - 14 = 18\ bits$
+
+#flashcards/memory/dmm_pyqs
+An 8 KB direct-mapped write-back cache is organized as multiple blocks, each of size 32 bytes.
+The processor generates 32 bit addresses.
+The cache controller maintains the tag information for each cache block comprising of the following.
+1 Valid bit, 1 Modified bit.
+As many bits as the minimum needed to identify the memory block mapped in the cache.
+What is the total size of memory needed at the cache controller to store meta-data (tags) for the cache?
+?
+Cache size = 8 KB = $2^3 \cdot 2^{10} = 2^{3+10} = 2^{13}\ bytes$\
+Block size = 32 bytes = $2^5\ bytes$\
+Block offset = $log_2\ 32 = 5\ bits$\
+No. of cache lines = $\frac{2^{13}}{2^5} = 2^{13-5} = 2^8$\
+No of Line number bits = $log_2\ 2^8 = 8\ bits$\
+No. of P.A. bits = $log_2\ 2^{32} = 32\ bits$\
+No of Tag bits = P.A. bits - (Line no. bits + offset) = $32 - (8 + 5) = 32 - 13 = 19\\ bits$\
+Tag directory entriy $= 1 + 1 + 19 = 21\ bits$\
+Tag directory size $= 21 \cdot 2^8 = 21 \cdot 256 = 5376\\ bits$
+Total size of memory needed at the cache controller to store meta-data (tags) for the cache = 5376 bits

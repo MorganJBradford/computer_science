@@ -11,8 +11,12 @@
             "id": "a6242336f1f3c64d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "COA/flashcards/memory.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -162,17 +166,18 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "12eebd9e7018ca48",
+  "active": "a6242336f1f3c64d",
   "lastOpenFiles": [
-    "COA/flashcards/4913",
     "COA/flashcards/memory.md~",
+    "COA/flashcards/4913",
+    "COA/memory/direct_memory_mapping.md",
+    "COA/flashcards/memory.md",
     "COA/memory/direct_memory_mapping.md~",
     "COA/memory/4913",
     "COA/memory/cache_memory_intro.md~",
     "discrete_math/logical_operators.md",
     "discrete_math/logical_operators.md~",
     "discrete_math/4913",
-    "COA/memory/direct_memory_mapping.md",
     "COA/architecture/4913",
     "COA/architecture/flashcards.md",
     "COA/flashcards",
