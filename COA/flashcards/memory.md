@@ -9,16 +9,6 @@ tags:
 Memory::The faculty of the brain by which data or information is encoded, stored, and retrieved when needed -- Wikipedia
 
 #flashcards/memory/intro
-Unit Table
-?
-| Prefix | Units | Add Expressions  | Final Expressions         |
-|--------|-------|------------------|----------------------------|
-| 1 Kilo Unit    | 1000 Unit        | $10^3 <Unit>$ | $10^3 <Unit>$  |
-| 1 Mega <Unit>  | 1000 Kilo <Unit> | $10^3 \cdot 10^3$ | $10^6 <Unit>$  |
-| 1 Giga <Unit>  | 1000 Mega <Unit> | $10^6 \cdot 10^3$ | $10^9 <Unit>$  |
-| 1 Tera <Unit>  | 1000 Giga <Unit> | $10^9 \cdot 10^3$ | $10^{12} <Unit>$ |
-
-#flashcards/memory/intro
 # Primary Memory:
 ?
 ## It is the main memory of the computer.

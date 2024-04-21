@@ -223,34 +223,126 @@ Tag directory entriy $= 1 + 1 + 19 = 21\ bits$\
 Tag directory size $= 21 \cdot 2^8 = 21 \cdot 256 = 5376\\ bits$
 Total size of memory needed at the cache controller to store meta-data (tags) for the cache = 5376 bits
 
-
 Consider a machine with a byte adressable main memory of $2^{16}$ bytes. Assume that a direct mapped data cache consisting of 32 lines of 64 bytes each is used in the system.
-A 50 x 50 two-dimensional array is stored in the main memory starting from memory location 110H.
+A 50 x 50 two-dimensional array is stored in the main memory starting from memory location 1100H.
 Assume that the data cache is initially empty. The complete array is accessed twice.
 Assume that the contents of the data cache do not change in between the two accesses.
+<br/>
 - How many cache misses will occur in total?
 a) 40
 5) 50
 c) 56
 d) 59
+<br/>
 - Which of the following line of the data cache wil be replaced by new blocks in accessing the array for the second time?
 a) line 4 to 11
 b) line 4 to line 7
 c) line 0 to line 7
 d) line 0 to line 8
-
-Solution:
+?
 Main Memory Size = $2^{16}\ bytes$\
 No. of P.A. bits = $log_2\ 2^{16} = 16\ bits$\
+<br/>
 Block Size = 64 B = $2^6\ bytes$\
 Block offset = $log_2\ 64 = 6\ bits$\
+<br/>
 No. of cache lines = 32\
 No of Line number bits = $log_2\ 32 = 5\ bits$\
+<br/>
 No of Tag bits = P.A. bits - (Line no. bits + offset) = $16 - (5 + 6) = 16 - 11 = 5\ bits$\
+<br/>
 Total number. of elements in the array = $50 \cdot 50 = 2500$\
 Element size = 1 byte
 Array size = 2500 bytes
 No. of blocks to store in the array = $\frac{2500}{64} = 39.0625$\
+Blocks are divided equally and we can't use 39.0625 blocks, so we use 40 blocks
 No. of blocks = 40
-- No. of cache misses = 56
+<br/>
+P.A. Split
+| | $\leftarrow 16\ bits \rightarrow$ | |
+|-|-|-|
+| 5 bits | 5 bits | 6 bits |
+| Tag | Line | Offset |
+<br/>
+<br/>
+Array is stored in the main memory starting from 1100H (H denotes a hexidecimal number) which is 0001 0001 0000 0000 in binary
+<br/>
+Tag bits = 0001 0
+Line bits = 00100
+Offset bits = 000000
+Line number is 4
+<br/>
+From this we know that the array is stored starting at line 4 onward.
+40 blocks are required to store the entire array.
+Let's call them $b_0, b_1, b_2, ..., b_{39}$
+The following table represents the cache memory after the first access of the array.
+<br/>
+| Block | First Access | |
+|-|-|-|
+| 0 | $b_{28}$ | |
+| 1 | $b_{29}$ | |
+| 2 | $b_{30}$ | |
+| 3 | $b_{31}$ | |
+| 4 | ~~$b_0$~~ $b_{32}$ | |
+| 5 | ~~$b_1$~~ $b_{33}$ | |
+| 6 | ~~$b_2$~~ $b_{34}$ | |
+| 7 | ~~$b_3$~~ $b_{35}$ | |
+| 8 | ~~$b_4$~~ $b_{36}$ | |
+| 9 | ~~$b_5$~~ $b_{37}$ | |
+| 10 | ~~$b_6$~~ $b_{38}$ | |
+| 11 | ~~$b_7$~~ $b_{39}$ | |
+| 12 | $b_8$ | |
+| ... | ... | ... |
+| 30 | $b_{26}$ | |
+| 31 | $b_{27}$ | |
+- First iteration cache misses is 40 because the cache is empty.
+<br/>
+| Block | First Access | Second Access |
+|-|-|-|
+| 0 | $b_{28}$ | |
+| 1 | $b_{29}$ | |
+| 2 | $b_{30}$ | |
+| 3 | $b_{31}$ | |
+| 4 | ~~$b_0$~~ ~~$b_{32}$~~ | ~~$b_0$~~ $b_{32}$ |
+| 5 | ~~$b_1$~~ ~~$b_{33}$~~ | ~~$b_1$~~ $b_{33}$ |
+| 6 | ~~$b_2$~~ ~~$b_{34}$~~ | ~~$b_{2}$~~ $b_{34}$ |
+| 7 | ~~$b_3$~~ ~~$b_{35}$~~ | ~~$b_{3}$~~ $b_{35}$ |
+| 8 | ~~$b_4$~~ ~~$b_{36}$~~ | ~~$b_{4}$~~ $b_{36}$ |
+| 9 | ~~$b_5$~~ ~~$b_{37}$~~ | ~~$b_{5}$~~ $b_{37}$ |
+| 10 | ~~$b_6$~~ ~~$b_{38}$~~ | ~~$b_{6}$~~ $b_{38}$ |
+| 11 | ~~$b_7$~~ ~~$b_{39}$~~ | ~~$b_{7}$~~ $b_{39}$ |
+| 12 | $b_8$ | |
+| ... | ... | ... |
+| 30 | $b_{26}$ | |
+| 31 | $b_{27}$ | |
+- Second iteration cache misses is 16 because the cache is full.
+<br/>
+- No. of cache misses = 40 + 16 = 56
 - line 4 to line 11
+
+# Hardware Implementation
+Lesson refers to last question in PYQs part 3.
+
+P.A. bits: 6
+Cache has $2^2$ lines
+Line bits: 2 bits
+Block ofset: 2 bits
+Tag bits: 2 bits
+P.A. bits are specific to each organization
+![[DMM Hardware Implementation (HWI).png]]
+Our goal is to compare the generated P.A's tag bits with the cache's tag bits to see if the data is in the cache or not.
+In order to do so we need two types of combinational circuts:
+- Comparator: Compares the generated tag bits with the cache's tag bits
+- Multiplexer: Selects the data from the cache if the data is present
+    - The line number bits are used as select lines for the multiplexer
+    - All of the tag bits of the same bit place will be given to the corresponding multiplexers as input
+    - The number of multiplexers needed will be determined by the number of tag bits
+    - Type of the multiplexer (2:1, 4:1, 8:1, etc.) will be determined by the number of lines in the cache
+    - The output of the multiplexer will be fed into the comparator which is again chosen based on the tag bits
+In this scenario we need a 2 bit comparator and two 4:1 multiplexers working in parallel
+Why?
+As 2 bits are specified for the tag field, each multiplexer can only read a single bit place.
+
+![[DMM HWI - 6 bit.png]]
+![[DMM HWI - P.A. bits.png]]
+![[DMM HWI - Disadvantage of DMM.png]]
