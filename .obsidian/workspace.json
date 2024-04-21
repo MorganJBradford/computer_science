@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "COA/memory/direct_memory_mapping.md",
-                "mode": "source",
+                "file": "discrete_math/logical_operators.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COA/memory/direct_memory_mapping.md",
+                "file": "discrete_math/logical_operators.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COA/memory/direct_memory_mapping.md",
+                "file": "discrete_math/logical_operators.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "COA/memory/direct_memory_mapping.md"
+                "file": "discrete_math/logical_operators.md"
               }
             }
           },
@@ -168,6 +168,13 @@
   },
   "active": "644dcefcac9e97c8",
   "lastOpenFiles": [
+    "discrete_math/logical_operators.md~",
+    "discrete_math/4913",
+    "discrete_math/propositional_logic.md",
+    "discrete_math/propositional_logic.md~",
+    "discrete_math/intro.md",
+    "discrete_math/intro.md~",
+    "COA/memory/direct_memory_mapping.md",
     "COA/memory/direct_memory_mapping.md~",
     "COA/memory/4913",
     "COA/memory/memory_hierarchy_and_interfacing.md",
@@ -182,14 +189,10 @@
     "COA/architecture/archiceture_classifications.md~",
     "COA/architecture/4913",
     "COA/architecture/architexture_basics.md",
-    "COA/architecture/architexture_basics.md~",
-    "COA/memory/direct_memory_mapping.md",
     "COA/memory/images/DMM Hardware Implementation (HWI).png",
     "COA/memory/images/DMM HWI - Disadvantage of DMM.png",
     "COA/memory/images/DMM HWI - P.A. bits.png",
     "COA/memory/images/DMM HWI - 6 bit.png",
-    "COA/flashcards/memory.md~",
-    "COA/flashcards/4913",
     "COA/flashcards/memory.md",
     "COA/flashcards/architecture.md",
     "discrete_math/logical_operators.md",
@@ -198,7 +201,6 @@
     "COA/architexture_basics.md",
     "COA/cache_memory_intro.md",
     "COA/memory_hierarchy_and_interfacing.md",
-    "COA/index.md",
-    "discrete_math/propositional_logic.md"
+    "COA/index.md"
   ]
 }
