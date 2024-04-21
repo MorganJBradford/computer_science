@@ -32,20 +32,35 @@ tags: []
 - Used to store data that is least frequently accessed.
 
 ### Cache related terms:
-  Cache Hit: When the data is found in the cache memory.
-  Hit Latency: Time taken to access the data from the cache memory.
-  Tag Directory (Data Structure): Processor finds out whether the data is present in the cache memory or not.
-  Cache Miss: When the data is not found in the cache memory.
-  Miss Latency: Time taken to access the data from the main memory.
+<dl>
+    <dt>Cache Hit:</dt>
+    <dd>When the data is found in the cache memory.</dd>
+    <dt>Hit Latency:</dt>
+    <dd>Time taken to access the data from the cache memory.</dd>
+    <dt>Tag Directory (Data Structure):</dt>
+    <dd>Processor finds out whether the data is present in the cache memory or not.</dd>
+    <dt>Cache Miss:</dt>
+    <dd>When the data is not found in the cache memory.</dd>
+    <dt>Miss Latency:</dt>
+    <dd>Time taken to access the data from the main memory.</dd>
+</dl>
 
 ### Other terms:
-  Page fault: When the data is not found in the main memory.
-  Page fault service time: Time taken to access the data from the secondary memory.
-  Page hit: When the data is found in the main memory.
-
+<dl>
+    <dt>Page Fault:</dt>
+    <dd>When the data is not found in the main memory.</dd>
+    <dt>Page Fault Service Time:</dt>
+    <dd>Time taken to access the data from the secondary memory.</dd>
+    <dt>Page Hit:</dt>
+    <dd>When the data is found in the main memory.</dd>
+</dl>
 
 #### Locality of Reference
-Locality Reference: The data that is accessed once is likely to be accessed again in the near future.
-Pinciple of Locality: States that the data that is accessed once is likely to be accessed again in the near future.
-Spacial Locality: States that the data that is accessed once is likely to be accessed again in the near future.
-Temporal Locality: States that the data that is accessed once is likely to be accessed again in the near future.
+<dl>
+    <dt>Principle of Locality:</dt>
+    <dd>States that the data that is accessed once is likely to be accessed again in the near future.</dd>
+    <dt>Spacial Locality:</dt>
+    <dd>States that the data that is accessed once is likely to be accessed again in the near future.</dd>
+    <dt>Temporal Locality:</dt>
+    <dd>States that the data that is accessed once is likely to be accessed again in the near future.</dd>
+</dl>

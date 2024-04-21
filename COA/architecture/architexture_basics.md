@@ -4,8 +4,10 @@ aliases: []
 tags: []
 ---
 
-Computer Archicecture:
-It is the design of computers, including their instruction sets, hardware components and system organization.
+<dl>
+    <dt>Computer Architecture:</dt>
+    <dd>It is the design of computers, including their instruction sets, hardware components and system organization.</dd>
+</dl>
 
 There are two main components of computer architecture:
 1. Instruction Set Architecture (ISA)
@@ -20,7 +22,7 @@ It is the actual hardware implementation of the computer. It includes the compon
 
 Instruction Set Architecture:
 MOV R1, O2H
-MOV r2, 03H
+MOV R2, 03H
 ADD R1, R2
 STORE X, R1
 
@@ -29,19 +31,16 @@ ADDER
 
 _History_
 
-> Analytical Engine (1837) - Charles Babbage:
->> First general-purpose computer
->> Assisted by Ada Lovelace
->>> First one to propose programming languages
->>> Was tutored by Augustus De Morgan
->>>> De Morgan's Laws revulutionized Boolean Algebra (George Boole)
-> Alan Turing (1936) - Computability and Non-Computability
-> Johann Von Neumann (1945) - Stored Program Concept
->> Child prodigy
->> Was able to divide 8 digit numbers by 8 digit numbers at the age of 6
->> Worked full time at Princeton by the age of 30
->> Proposed the Von Neumann Architecture
->>> Offered Turing a research assistant position under his supervision in quantum mechanics at the intitute of advanced studies
-
-Family Tree of Computer Science - Professor Brailsford: \
-???? "If Turing is the father and and Babbage is the grandfather, Ada Lovelace is the great aunt, Neumann was the impossibley rich and clever uncle of computer science."
+- Analytical Engine (1837) - Charles Babbage:
+    - First general-purpose computer
+    - Assisted by Ada Lovelace
+        - First one to propose programming languages
+        - Was tutored by Augustus De Morgan
+            - De Morgan's Laws revulutionized Boolean Algebra (George Boole)
+- Alan Turing (1936) - Computability and Non-Computability
+- Johann Von Neumann (1945) - Stored Program Concept
+    - Child prodigy
+    - Was able to divide 8 digit numbers by 8 digit numbers at the age of 6
+    - Worked full time at Princeton by the age of 30
+    - Proposed the Von Neumann Architecture
+        - Offered Turing a research assistant position under his supervision in quantum mechanics at the intitute of advanced studies
