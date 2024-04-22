@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "ea4293e13601cad4",
+        "id": "707ea73a760c718f",
         "type": "tabs",
         "children": [
           {
-            "id": "644dcefcac9e97c8",
+            "id": "372db1fb9637eb72",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "COA/flashcards/memory.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -166,12 +166,20 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "644dcefcac9e97c8",
+  "active": "372db1fb9637eb72",
   "lastOpenFiles": [
     "COA/flashcards/memory.md~",
     "COA/flashcards/4913",
+    "COA/memory/images/DMM HWI - 6 bit.png",
+    "COA/memory/images/DMM Hardware Implementation (HWI).png",
+    "COA/flashcards/memory.md",
+    "COA/memory/direct_memory_mapping.md",
     "COA/memory/direct_memory_mapping.md~",
     "COA/memory/4913",
+    "COA/memory/images/DMM - P.A. bit Diagram.png",
+    "COA/memory/images/DMM HWI - Hit Latency Answer.png",
+    "COA/memory/images/DMM HWI - Hit Latency Question.png",
+    "COA/memory/cache_memory_intro.md",
     "COA/flashcards/architecture.md",
     "COA/flashcards/architecture.md~",
     "discrete_math/logical_operators.md",
@@ -181,20 +189,15 @@
     "discrete_math/propositional_logic.md~",
     "discrete_math/intro.md",
     "discrete_math/intro.md~",
-    "COA/memory/direct_memory_mapping.md",
     "COA/memory/memory_hierarchy_and_interfacing.md",
     "COA/memory/memory_hierarchy_and_interfacing.md~",
     "COA/memory/images/Memory Hierarchy.png",
     "COA/memory/memory_intro.md",
     "COA/memory/images/Memory Interfacing Diagram.png",
-    "COA/memory/cache_memory_intro.md",
     "COA/architecture/archiceture_classifications.md",
     "COA/architecture/architexture_basics.md",
-    "COA/memory/images/DMM Hardware Implementation (HWI).png",
     "COA/memory/images/DMM HWI - Disadvantage of DMM.png",
     "COA/memory/images/DMM HWI - P.A. bits.png",
-    "COA/memory/images/DMM HWI - 6 bit.png",
-    "COA/flashcards/memory.md",
     "COA/architecture/flashcards.md",
     "COA/1711988428-VCMQ.md",
     "COA/architexture_basics.md",

@@ -534,3 +534,53 @@ The following table represents the cache memory after the first access of the ar
 <br/>
 - No. of cache misses = 40 + 16 = 56
 - line 4 to line 11
+
+# Hardware Implementation
+Lesson refers to last question in PYQs part 3.
+
+#flashcards/memory/hardware_implementation
+Tag directory contains as many entries as the number of lines in the cache (true/false)::True
+P.A. bits are the same for all organizations (true/false)::False
+What is the most important part of the tag directory and why is it not the only important part?
+?
+- Tag bits.
+    - Most, not only, because sometimes a few extra bits are added to the tag bits to store additional information.
+        - Such as the pyq mentioning 1 valid bit and 1 modified bit.
+
+#flashcards/memory/hardware_implementation
+What generates tag bits and how do they work?
+?
+1. With each cache line their are tag bits, specified by the processor, associated to it.
+2. Generally the generated P.A. bits tag portion is match with the tag bits associate with the cache line in that particular instance.
+3. If they're equal it a hit, if not it's a miss.
+
+
+#flashcards/memory/hardware_implementation
+In the following P.A. split how many multiplexers and comparators are needed, and what type are they?
+Tag bits = 2
+Line bits = 2
+Block/Line offset bits = 2
+?
+- 2 4x1 multiplexers
+- 1 2-bit comparator
+
+#flashcards/memory/hardware_implementation
+What type of component is the comparator?
+?
+- XOR Gate
+    - If the generated tag bits and the cache's tag bits are equal, the output of the XOR gate will be 0 (cache miss).
+    - If they're not equal, the output will be 1 (cache hit).
+
+
+#flashcards/memory/hardware_implementation
+![[DMM HWI - Hit Latency Question.png]]::![[DMM HWI - Hit Latency Answer.png]]
+
+#flashcards/memory/hardware_implementation
+What is the biggest disadvantage of direct memory mapping and why?
+?
+- Conflict miss.
+    - Because the cache is divided into equally sized blocks, if two blocks are mapped to the same cache line, the second block will overwrite the first block.
+    - This is a disadvantage because the first block may be needed again in the near future.
+    - Worst case scenario is that the cache is full and the first block is overwritten, then the second block is needed again, and the first block is needed again, but the cache is full so the first block is overwritten again.
+        - Shown in bottom example image:
+![[DMM HWI - Disadvantage of DMM.png]]

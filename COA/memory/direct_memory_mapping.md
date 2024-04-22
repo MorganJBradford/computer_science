@@ -90,6 +90,16 @@ Block/Line Offset: The bits that are used to identify the word in the block.
 # Hardware Implementation
 Lesson refers to last question in PYQs part 3.
 
+Tag directory contains as many entries as the number of lines in the cache.
+The most important part of the tag directory is the tag bits.
+Most, not only, because sometimes a few extra bits are added to the tag bits to store additional information.
+Such as the pyq mentioning 1 valid bit and 1 modified bit.
+With each cache line their are tag bits, specified by the processor, associated to it.
+Generally the generated P.A. bits tag portion is matche with the tag bits associate with the cache line in that particular instance.
+If they're equal it a hit, if not it's a miss.
+
+Example:
+
 P.A. bits: 6
 Cache has $2^2$ lines
 Line bits: 2 bits
@@ -100,7 +110,7 @@ P.A. bits are specific to each organization
 ![[DMM Hardware Implementation (HWI).png]]
 
 Our goal is to compare the generated P.A's tag bits with the cache's tag bits to see if the data is in the cache or not.
-In order to do so we need two types of combinational circuts:
+In order to do so we need two types of combinational circuits:
 - Comparator: Compares the generated tag bits with the cache's tag bits
 - Multiplexer: Selects the data from the cache if the data is present
     - The line number bits are used as select lines for the multiplexer
@@ -113,5 +123,49 @@ Why?
 As 2 bits are specified for the tag field, each multiplexer can only read a single bit place.
 
 ![[DMM HWI - 6 bit.png]]
+
+The comparator is essentially an XOR gate.
+If the generated tag bits and the cache's tag bits are equal, the output of the XOR gate will be 0 (cache miss).
+If they're not equal, the output will be 1 (cache hit).
+
 ![[DMM HWI - P.A. bits.png]]
+
+If there are:
+$n$ tag bits and $l$ lines in the cache
+$n(l\cdot 1)$ multiplexers will be used which will work in parallel
+Also, a single $n$ bit comparator will be needed.
+Therefore, time to find out whether it is a cache hit or miss, or hit latency, is:
+Hit Latency = $T_{mux} + T_{n-bit\ comparator}$
+Why one? Why not all multiplexers?
+The multiplexers are working in parallel, so the time taken by the multiplexer that is the slowest will be the time taken by the entire system.
+In numerical problems, $T_{mux}$ is neglected as the time taken by the _n-bit comparator_ is much larger than the time taken by the multiplexer.
+
+Question:
+![[DMM HWI - Hit Latency Question.png]]
+
+In the comparator delay, the n stands for the tag bits.
+Hit Latency = $8 \cdot 11 = 88 ns$ neglecting the multiplexer delay.
+
+Answer:
+![[DMM HWI - Hit Latency Answer.png]]
+
+In direct mapping P.A. bits are divided into three parts:
+- Block Number
+    - Tag bits
+    - Line bits
+- Block/Line offset bits
+
+If $b$ bits are assigned for block number.
+Main memory has $2^b$ blocks.
+Having $l$ line bits means there are $2^l$ lines in the cache.
+From the $b$ bits the least significant $l$ bits are the remainder if block number is divided by $2^l$.
+If $x$ is the block number than $x \mathbin{\%} 2^l$ is the line number.
+
+![[DMM - P.A. bit Diagram.png]]
+
+For example, suppose we have a cache with 4 lines and these are the block requests made by the processer in the specific order:
+"7, 8, 6, 10, 11, 14"
+
+Conflict miss is the biggest disadvantage of direct memory mapping as show cased in the second example in the following image.
+
 ![[DMM HWI - Disadvantage of DMM.png]]
