@@ -49,7 +49,6 @@ Main Memory is sometimes referred to as physical address space
 
 In this example we have 16 blocks, or $log_2\ 16 = log_2\ 2^4 = 4$ bits to address each block.
 
-
 If the processor generates the following address: 011111, which word of which block is being addressed?: Block 7, Word 3
 
 If we consider all of the bit places' magnitudes and add up all of the values, we get the following:
@@ -68,8 +67,7 @@ How many bits are needed to address each line?: $log_2\ 4 = log_2\ 2^2 = 2$ bits
 All the main memory blocks can't be assigned to the all the cache lines at once.
 Therefore we have to perform mapping, in this case round-robin mapping
 
-
-#### __Round Robin Mapping (Direct Memory Mapping?):__
+#### __Round Robin Mapping (Direct Memory Mapping):__
 
 | Main Memory | | | | | | | | | | Cache Memory |
 |-|-|-|-|-|-|-|-|-|-|-|

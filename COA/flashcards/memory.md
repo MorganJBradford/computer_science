@@ -9,59 +9,60 @@ tags:
 Memory::The faculty of the brain by which data or information is encoded, stored, and retrieved when needed -- Wikipedia
 
 #flashcards/memory/intro
-# Primary Memory:
+Primary Memory:
 ?
-## It is the main memory of the computer.
-## It is volatile memory.
-## It is used to store data and instructions that are currently being executed by the CPU.
-## It is also known as RAM (Random Access Memory) - Actually called DRAM (Dynamic RAM).
-## It is faster than secondary memory.
-## It is directly accessed by the CPU.
+- It is the main memory of the computer.
+- It is volatile memory.
+- It is used to store data and instructions that are currently being executed by the CPU.
+- It is also known as RAM (Random Access Memory) - Actually called DRAM (Dynamic RAM).
+- It is faster than secondary memory.
+- It is directly accessed by the CPU.
 
 #flashcards/memory/intro
-# Secondary Memory:
+Secondary Memory:
 ?
-## It is non-volatile memory | It retains data even when the computer is turned off.
-## It is slower than primary memory.
-## Bigger in size.
-## Cost-effective.
-## Semi-Random Accessibility.
-## It is used to store data and instructions that are not currently being executed by the CPU.
-## It is not directly accessed by the CPU.
-## It is also known as hard disk.
-### Slower because it is a mechanical device.
-#### It has:
-##### a spinning disk.
-##### a read/write head.
-#### The read/write head moves to the location of the data that needs to be read or written.
-#### This movement takes time (seek time).
+- It is non-volatile memory | It retains data even when the computer is turned off.
+- It is slower than primary memory.
+- Bigger in size.
+- Cost-effective.
+- Semi-Random Accessibility.
+- It is used to store data and instructions that are not currently being executed by the CPU.
+- It is not directly accessed by the CPU.
+- It is also known as hard disk.
+    - Slower because it is a mechanical device.
+        - It has:
+            - a spinning disk.
+            - a read/write head.
+        - The read/write head moves to the location of the data that needs to be read or written.
+        - This movement takes time (seek time).
 
 #flashcards/memory/intro
-# Cache Memory:
+Cache Memory:
 ?
-## It is a small block of memory that is used to store frequently accessed data.
-## It is volatile memory.
-## It is faster than primary memory.
-## It is directly accessed by the CPU.
-## It is also known as SRAM (Static RAM).
+- It is a small block of memory that is used to store frequently accessed data.
+- It is volatile memory.
+- It is faster than primary memory.
+- It is directly accessed by the CPU.
+- It is also known as SRAM (Static RAM).
 
 #flashcards/memory/intro
 Memory Mapping Table:
 ?
+
 | | | | Cache Memorry Mapping | | Virtual Memory Mapping | |
 |-|-|-|-|-|-|-|
 | Processor | $\leftrightarrow$ | Cache | $\leftarrow$Words (or blocks)$\rightarrow$ | Main Memory | $\leftarrow Pages \rightarrow$ | Secondary Memory |
 | Processor | $\leftarrow$ | -------- | $\rightarrow$ | Main Memory | $\leftarrow Pages \rightarrow$ | Secondary Memory |
 
 #flashcards/memory/cache_memory
-## L1 Cache
+L1 Cache (Primary Cache) facts
 ?
 - Embedded in the processor chip.
 - Fastest cache memory.
 - Smallest in size.
 
 #flashcards/memory/cache_memory
-## L2 Cache
+L2 Cache (Secondary Cache) facts
 ?
 - Initially incorporated in the motherboard.
 - Now embedded in the processor chip.
@@ -69,7 +70,7 @@ Memory Mapping Table:
 - Used to store data that is frequently accessed which are second in priority and which cannot be incorporated in L1 due to space limitation.
 
 #flashcards/memory/cache_memory
-## L3 Cache (Shared Cache)
+L3 Cache (Shared Cache) facts
 ?
 - Embedded in the processor.
 - Shared by all cores.
@@ -96,34 +97,68 @@ Temporal Locality::States that the data that is accessed once is likely to be ac
 
 
 #flashcards/memory/direct_memory_mapping
-# Direct Memory Mapping - Secondary Memory to Main Memory
-## Secondary Memory
-?
+- Direct Memory Mapping - Secondary Memory to Main Memory
+    - Secondary Memory
+    ?
 - Permanent programs are stored here.
 - During execution, programs are turned into processes.
 - Every process is subdivided into equal size pages.
 
 #flashcards/memory/direct_memory_mapping
-# Direcet Memory Mapping - Main Memory to Cache Memory
-## Main Memory
-?
+- Direct Memory Mapping - Main Memory to Cache Memory
+    - Main Memory
+    ?
 - Subdivided into equally sized frames.
 
 #flashcards/memory/direct_memory_mapping
 What piece of software is responsible for subdividing processes into pages and bringing them into the main memory?::Operating System
-
-#flashcards/memory/direct_memory_mapping
 Frame size is equal to what?::Page size?
 Page size is equal to what?::Frame size?
 What is the smallest addressable unit of memory?::Word
 What is the term for when 1 word is equal to 1 byte?::Byte-Addressable Memory
+Natural Log equivalent to Log base 2::$ln(n)\div ln(2) = log_2\ n$\
+Natural Log 64 word Calculation::$ln(64)\div ln(2) = 6$\
+Log2 64 word Calculation::$log_2\ 64\ = log_2\ 2^6 = 6$
 
 #flashcards/memory/direct_memory_mapping
-## Direct Memory Mapping - Main Memory to Cache Memory
+Direct Memory Mapping - Main Memory to Cache Memory
 ?
 - The main memory is divided into equally sized blocks.
 - These cache memory slots are called cache lines.
 - Line size = Block size.
+
+#flashcards/memory/direct_memory_mapping
+P.A. bits
+?
+- Physical Address bits
+[^Main Memory is sometimes referred to as physical address space]
+
+#flashcards/memory/dmm_examples
+Given the following values, how many bits are needed to address each line?
+- Cache Size: 16 words
+- Block size: 4 words
+- Line size: 4 words
+- No. of Lines in Cache: 16/4 = 4
+?
+$log_2\ 4 = log_2\ 2^2 = 2\ bits$
+
+#flashcards/memory/dmm_examples
+PA Bit Split (6 bit example)
+?
+4 bits for the block number, 2 bits for the block/line offset.
+The block number can be further split into 2 bits for the tag bits and line number.
+
+#flashcards/memory/direct_memory_mapping
+The bits that are used to identify the block in the cache memory.::Tag Bits
+The bits that are used to identify the line in the cache memory.::Line Number
+The bits that are used to identify the word in the block.::Block/Line Offset
+
+#flashcards/memory/direct_memory_mapping
+What is a Tag Directory?
+?
+- A data structure that helps the processor find out whether the data is present in the cache memory or not.
+- Primarily keeps the record of the Tag bits, cache line-wise.
+- No. of entries = No. of Cache lines.
 
 #flashcards/memory/direct_memory_mapping
 Given the following values please provide the calculation for determining the number of bits required to address each block.
@@ -140,18 +175,7 @@ Given the following values please provide the calculation for determining the nu
 ?
 In this example we have 64 words, or $log_2\ 64 = log_2\ 2^6 = 6\ bits$ to address each block.
 
-#flashcards/memory/direct_memory_mapping
-Natural Log equivalent to Log base 2::$ln(n)\div ln(2) = log_2\ n$\
-Natural Log 64 word Calculation::$ln(64)\div ln(2) = 6$\
-Log2 64 word Calculation::$log_2\ 64\ = log_2\ 2^6 = 6$
-
-#flashcards/memory/direct_memory_mapping
-P.A. bits
-?
-Physical Address bits
-Main Memory is sometimes referred to as physical address space
-
-#flashcards/memory/direct_memory_mapping #flashcards/memory/dmm_examples
+#flashcards/memory/dmm_examples
 Given the following values, how many bits are required to address each block?
 - Main Memory Size: 64 words i.e. (0, 1, ..., 63)
 - Block size: 4 words
@@ -166,7 +190,7 @@ Given the following values, how many bits are required to address each block?
 ?
 In this example we have 16 blocks, or $log_2\ 16 = log_2\ 2^4 = 4\ bits$ to address each block.
 
-#flashcards/memory/direct_memory_mapping #flashcards/memory/dmm_examples
+#flashcards/memory/dmm_examples
 If the processor generates the following address: 011111, which word of which block is being addressed?
 - Main Memory Size: 64 words i.e. (0, 1, ..., 63)
 - Block size: 4 words
@@ -181,7 +205,7 @@ If the processor generates the following address: 011111, which word of which bl
 ?
 Block 7, Word 3
 
-#flashcards/memory/direct_memory_mapping #flashcards/memory/dmm_examples
+#flashcards/memory/dmm_examples
 If we consider all of the bit places' magnitudes and add up all of the values, we get the following:
 - Main Memory Size: 64 words i.e. (0, 1, ..., 63)
 - Block size: 4 words
@@ -195,52 +219,7 @@ If we consider all of the bit places' magnitudes and add up all of the values, w
 | __15:__ | 60 | 61 | 62 | 63 |
 ?
 $2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0 = 0 + 16 + 8 + 4 + 2 + 1 = 31$
-
-#flashcards/memory/direct_memory_mapping #flashcards/memory/dmm_examples
-Given the following values, how many bits are needed to address each line?
-- Cache Size: 16 words
-- Block size: 4 words
-- Line size: 4 words
-- No. of Lines in Cache: 16/4 = 4
-?
-$log_2\ 4 = log_2\ 2^2 = 2\ bits$
-
-#flashcards/memory/direct_memory_mapping
-All the main memory blocks can't be assigned to all the cache lines at once.
-Therefore we have to perform mapping, in this case round-robin mapping.
-?
-| Main Memory | | | | | | | | | | Cache Memory |
-|-|-|-|-|-|-|-|-|-|-|-|
-| __0:__| 0 | 1 | 2 | 3 | $\rightarrow$ | __0:__| 0 | 1 | 2 | 3 |
-| __1:__| 4 | 5 | 6 | 7 | $\rightarrow$  |__1:__| 4 | 5 | 6 | 7 |
-| __2:__| 8 | 9 | 10 | 11 | $\rightarrow$  |__2:__| 8 | 9 | 10 | 11 |
-| __3__| 12 | 13 | 14 | 15 | $\rightarrow$ |__3:__| 12 | 13 | 14 | 15 |
-| __4:__| 16 | 17 | 18 | 19 | $\rightarrow$ | __0:__ | 0 | 1 | 2 | 3 |
-| __...__| ... | ... | ... | ... | $\rightarrow$ | __...__| ... | ... | ... | ... |
-
-#flashcards/memory/direct_memory_mapping #flashcards/memory/dmm_examples
-PA Bit Split (6 bit example)
-?
-4 bits for the block number, 2 bits for the block/line offset.
-The block number can be further split into 2 bits for the tag bits and line number.
-
-#flashcards/memory/direct_memory_mapping
-The bits that are used to identify the block in the cache memory.::Tag Bits
-The bits that are used to identify the line in the cache memory.::Line Number
-The bits that are used to identify the word in the block.::Block/Line Offset
-
-#flashcards/memory/direct_memory_mapping
-Byte Chart
-?
-|        |              |        |
-|--------|--------------|--------|
-| 1 Byte | 8 bits       |        |
-| 1 KB   | 1024 B(ytes) | 2^10 B |
-| 1 MB   | 1024 KB      | 2^20 B |
-| 1 GB   | 1024 MB      | 2^30 B |
-
-
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/dmm_examples
 Given the following values, what is the P.A. bits split?
 MM Size: 4GB
 Cache Size: 1MB
@@ -256,14 +235,8 @@ MM Size = $4\ GB = 2^2 \cdot 2^{30}\ B = 2^{2+30} B = 2^{32}\ B$
 - No. of Lines in Cache = $\frac{2^{20}}{2^{12}} = 2^{20-12} = 2^8$
 - No. of Tag Bits: P.A. bits - (Line no. bits + offset) = $32 - (8 + 12) = 32 - 20 = 12\ bits$
 
-#flashcards/memory/direct_memory_mapping
-What is a Tag Directory?
-?
-- A data structure that helps the processor find out whether the data is present in the cache memory or not.
-- Primarily keeps the record of the Tag bits, cache line-wise.
-- No. of entries = No. of Cache lines.
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/dmm_examples
 Given the following values, what is the tag directory size?
 MM Size: 4GB
 Cache Size: 1MB
@@ -271,7 +244,7 @@ Block Size: 4 KB
 ?
 - Tag Directory Size = No. of entries $\cdot$ Tag bits = $2^8 \cdot 12 = 3072\ bits$
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/dmm_examples
 Given the following values, what is the number of tag bits?
 MM Size: 256 MB
 Cache Size: 512 KB
@@ -283,7 +256,7 @@ Word Size: 1 Byte
 - Cache Size = $512\ KB = 2^9 \cdot 2^{10}\ B = 2^{9+10} B = 2^{19}\ B$
 - No of Tag Bits: $log_2({2^{28}}\div{2^{19}}) = 9\ bits$
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/dmm_examples
 Given the following values, what is the cache size?
 Byte-Addressable MB Size: 16 GB
 Block Size: 16 KB
@@ -311,20 +284,20 @@ What does MIPS stand for?::Million Instructions Per Second
 #flashcards/memory/memory_hierarchey_and_interfacing
 If our CPU is connected to multiple levels of memory simultaneously, how would we calculate the average memory access time for the following?
 ?
-### If we have memory units: M1, M2, M3
-### Acces Time:
-#### T1, T2, T3
-##### T1 < T2 < T3
-### Hit Ratio:
-#### H1, H2, H3
-##### H1 > H2 > H3
+- If we have memory units: M1, M2, M3
+- Acces Time:
+    - T1, T2, T3
+        - T1 < T2 < T3
+- Hit Ratio:
+    - H1, H2, H3
+        - H1 > H2 > H3
 ?
 $H_1 T_1 + ((1-H_1)\cdot H_2) T_2 + ((1-H_1) \cdot (1-H_2))T_3$\
-^ Because the memory units are connected to the CPU simultaneously, which is why these checks will run in parallel.
+[^Because the memory units are connected to the CPU simultaneously, which is why these checks will run in parallel]
 - So, the time taken to access the data will be the time taken to access the data from the memory unit which has the highest hit ratio.
-     > Total no. of Instructions = 100
-     > No. of Instructions found in nth level = 80
-     > MM's Hit Ratio = 80/100 = 0.8 = 80%
+     - Total no. of Instructions = 100
+     - No. of Instructions found in nth level = 80
+     - MM's Hit Ratio = 80/100 = 0.8 = 80%
 
 
 #flashcards/memory/memory_hierarchey_and_interfacing
@@ -333,8 +306,8 @@ If our CPU is connected to only one level of memory at a time, how would we calc
 $H_1T_1 + ((1-H_1) \cdot H_2) (H_1+T_2) + ((1-H_1) \cdot (1-H_2)) (H_1+T_2+T_3)$
 
 #flashcards/memory/memory_hierarchey_and_interfacing
-### A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
-#### Parallel Organization
+A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
+- Parallel Organization
 ?
 Assume both the cache and main memory are simultaneously connected to the proccesor.
 | Access Time | Hit Ratio |
@@ -344,8 +317,8 @@ Assume both the cache and main memory are simultaneously connected to the procce
 | $T_{avg} = H_{cache}T_{cache} + (1-H_{cache})T_{MM} \\ = 0.8 \cdot 30 + (1-0.8)\cdot150 \ ns \\ = 24 + 0.2 \cdot 150 = 54\ ns$ |
 
 #flashcards/memory/memory_hierarchey_and_interfacing
-### A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
-#### Level wise organization
+A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
+- Level wise organization
 ?
 Assume only one memory unit is connected to the CPU at a time.
 - Level wise organization
@@ -358,9 +331,9 @@ Assume only one memory unit is connected to the CPU at a time.
 | $= 24 + 0.2 \cdot 180 = 24 + 36 = 60\ ns$ |
 
 #flashcards/memory/memory_hierarchey_and_interfacing
-### Assume that for a certain processor, a read request takes 50 ns on a cache miss and 5 ns on a cache hit.
-Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit.
-The average read access time in ns is:
+Assume that for a certain processor, a read request takes 50 ns on a cache miss and 5 ns on a cache hit.
+- Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit.
+- The average read access time in ns is:
 ?
 | Access Time | Hit Ratio |
 |-------------|-----------|
@@ -371,7 +344,7 @@ The average read access time in ns is:
 | $= 4 + 0.2 \cdot 50 = 4 + 10 = 14\ ns$ |
 
 #flashcards/memory/memory_hierarchey_and_interfacing
-## Memory Hierarchy: Access Time | Size
+Memory Hierarchy: Access Time | Size
 ?
 1. Registers
 2. S.R.A.M
@@ -379,7 +352,7 @@ The average read access time in ns is:
 4. Secondary Memory
 
 #flashcards/memory/memory_hierarchey_and_interfacing
-## Memory Hierarchy: Cost | Usage Frequency
+Memory Hierarchy: Cost | Usage Frequency
 ?
 1. Secondary Memory
 2. Main Memory D.R.A.M
