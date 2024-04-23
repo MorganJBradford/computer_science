@@ -584,3 +584,17 @@ What is the biggest disadvantage of direct memory mapping and why?
     - Worst case scenario is that the cache is full and the first block is overwritten, then the second block is needed again, and the first block is needed again, but the cache is full so the first block is overwritten again.
         - Shown in bottom example image:
 ![[DMM HWI - Disadvantage of DMM.png]]
+
+#flashcards/memory/associative_mapping
+MM Size = 2 GB
+Block Size = 4 KB
+Comparator Delay = 15n nanoseconds
+Delay of Multi-input OR gate = 7 nanoseconds (Fully associative mapping)
+What is the hit latency?
+?
+- MM Size = $2^1 \cdot 2^{30} = 2^{31} B$
+- P.A. bits = $log_2\ 2^{31} = 31\ bits$
+- Block Size = $2^{11} B$
+- Block Offset = $log_2\ 2^{11} = 11\ bits$
+- No. of Tag bits = (31 - 11) = 20 bits
+Hit Latency = $(15 \cdot 20) + 7 = 307\ ns$
