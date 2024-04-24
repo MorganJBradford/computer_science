@@ -54,14 +54,14 @@ Memory Mapping Table:
 | Processor | $\leftrightarrow$ | Cache | $\leftarrow$Words (or blocks)$\rightarrow$ | Main Memory | $\leftarrow Pages \rightarrow$ | Secondary Memory |
 | Processor | $\leftarrow$ | -------- | $\rightarrow$ | Main Memory | $\leftarrow Pages \rightarrow$ | Secondary Memory |
 
-#flashcards/memory/cache_memory
+#flashcards/memory/cache
 L1 Cache (Primary Cache) facts
 ?
 - Embedded in the processor chip.
 - Fastest cache memory.
 - Smallest in size.
 
-#flashcards/memory/cache_memory
+#flashcards/memory/cache
 L2 Cache (Secondary Cache) facts
 ?
 - Initially incorporated in the motherboard.
@@ -69,7 +69,7 @@ L2 Cache (Secondary Cache) facts
 - Different processor cores have their own L2 caches.
 - Used to store data that is frequently accessed which are second in priority and which cannot be incorporated in L1 due to space limitation.
 
-#flashcards/memory/cache_memory
+#flashcards/memory/cache
 L3 Cache (Shared Cache) facts
 ?
 - Embedded in the processor.
@@ -77,12 +77,33 @@ L3 Cache (Shared Cache) facts
 - Largest in size.
 - Used to store data that is least frequently accessed.
 
-#flashcards/memory/cache_terms
+#flashcards/memory/cache
+Types of Cache misses and some bullet points
+?
+- Compulsory Miss (a.k.a Cold Start Miss)
+    - First access to a block
+    - Occurs when a memory block is brought into the cache for the first time
+    - Cannot be avoided unless the block has been pre-fetched
+    - Increasing the block size reduces the number of compulsory misses by exploiting spatial locality
+- Conflict Miss (a.k.a. Collision Miss/Interference Miss)
+    - Occurs when two or more memory blocks map to the same cache block
+    - Information was present in the cache previously but was replaced by another block
+- Capacity Miss
+    - Occurs due to the limited size of the capacity, not the due to the mapping principle being implemented
+    - Occurs when the cache is full and a new block must be brought in
+    - When the working set is bigger than the cache itself, these misses occur frequently
+    - Hardest to identify
+- Coherence Miss
+- Coverage Miss
+- System related Miss
+
+#flashcards/memory/terms/cache
 What is the term for when data is found in the cache memory?::Cache Hit
 What is the term for the time taken to access data from cache memory?::Hit Latency
 What data structure does the processor use to determine if data is present in the cache memory?::Tag Directory (Data Structure)
 What is the term for when data is not found in the cache memory?::Cache Miss
 What is the term for the time taken to access data from the main memory?::Miss Latency
+What are the 3 Cs?::Compulsory Miss (Cold Start Miss), Conflict Miss (Collision/Interference Miss), Capacity Miss
 
 #flashcards/memory/other_terms
 What is the term for when data is not found in the main memory?::Page fault
@@ -96,7 +117,7 @@ Spacial Locality::States that the data that is accessed once is likely to be acc
 Temporal Locality::States that the data that is accessed once is likely to be accessed again in the near future.
 
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/mapping/direct
 - Direct Memory Mapping - Secondary Memory to Main Memory
     - Secondary Memory
     ?
@@ -104,13 +125,13 @@ Temporal Locality::States that the data that is accessed once is likely to be ac
 - During execution, programs are turned into processes.
 - Every process is subdivided into equal size pages.
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/mapping/direct
 - Direct Memory Mapping - Main Memory to Cache Memory
     - Main Memory
     ?
 - Subdivided into equally sized frames.
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/mapping #flashcards/memory/mapping/direct
 What piece of software is responsible for subdividing processes into pages and bringing them into the main memory?::Operating System
 Frame size is equal to what?::Page size?
 Page size is equal to what?::Frame size?
@@ -120,20 +141,20 @@ Natural Log equivalent to Log base 2::$ln(n)\div ln(2) = log_2\ n$\
 Natural Log 64 word Calculation::$ln(64)\div ln(2) = 6$\
 Log2 64 word Calculation::$log_2\ 64\ = log_2\ 2^6 = 6$
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/mapping/direct
 Direct Memory Mapping - Main Memory to Cache Memory
 ?
 - The main memory is divided into equally sized blocks.
 - These cache memory slots are called cache lines.
 - Line size = Block size.
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/mapping/direct
 P.A. bits
 ?
 - Physical Address bits
 [^Main Memory is sometimes referred to as physical address space]
 
-#flashcards/memory/dmm_examples
+#flashcards/memory/direct/examples
 Given the following values, how many bits are needed to address each line?
 - Cache Size: 16 words
 - Block size: 4 words
@@ -142,25 +163,25 @@ Given the following values, how many bits are needed to address each line?
 ?
 $log_2\ 4 = log_2\ 2^2 = 2\ bits$
 
-#flashcards/memory/dmm_examples
+#flashcards/memory/direct/examples
 PA Bit Split (6 bit example)
 ?
 4 bits for the block number, 2 bits for the block/line offset.
 The block number can be further split into 2 bits for the tag bits and line number.
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/mapping #flashcards/memory/mapping/direct
 The bits that are used to identify the block in the cache memory.::Tag Bits
 The bits that are used to identify the line in the cache memory.::Line Number
 The bits that are used to identify the word in the block.::Block/Line Offset
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/mapping/direct
 What is a Tag Directory?
 ?
 - A data structure that helps the processor find out whether the data is present in the cache memory or not.
 - Primarily keeps the record of the Tag bits, cache line-wise.
 - No. of entries = No. of Cache lines.
 
-#flashcards/memory/direct_memory_mapping
+#flashcards/memory/mapping/direct
 Given the following values please provide the calculation for determining the number of bits required to address each block.
 - Main Memory Size: 64 words i.e. (0, 1, ..., 63)
 - Block size: 4 words
@@ -175,7 +196,7 @@ Given the following values please provide the calculation for determining the nu
 ?
 In this example we have 64 words, or $log_2\ 64 = log_2\ 2^6 = 6\ bits$ to address each block.
 
-#flashcards/memory/dmm_examples
+#flashcards/memory/direct/examples
 Given the following values, how many bits are required to address each block?
 - Main Memory Size: 64 words i.e. (0, 1, ..., 63)
 - Block size: 4 words
@@ -190,7 +211,7 @@ Given the following values, how many bits are required to address each block?
 ?
 In this example we have 16 blocks, or $log_2\ 16 = log_2\ 2^4 = 4\ bits$ to address each block.
 
-#flashcards/memory/dmm_examples
+#flashcards/memory/direct/examples
 If the processor generates the following address: 011111, which word of which block is being addressed?
 - Main Memory Size: 64 words i.e. (0, 1, ..., 63)
 - Block size: 4 words
@@ -205,7 +226,7 @@ If the processor generates the following address: 011111, which word of which bl
 ?
 Block 7, Word 3
 
-#flashcards/memory/dmm_examples
+#flashcards/memory/direct/examples
 If we consider all of the bit places' magnitudes and add up all of the values, we get the following:
 - Main Memory Size: 64 words i.e. (0, 1, ..., 63)
 - Block size: 4 words
@@ -219,7 +240,7 @@ If we consider all of the bit places' magnitudes and add up all of the values, w
 | __15:__ | 60 | 61 | 62 | 63 |
 ?
 $2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0 = 0 + 16 + 8 + 4 + 2 + 1 = 31$
-#flashcards/memory/dmm_examples
+#flashcards/memory/direct/examples
 Given the following values, what is the P.A. bits split?
 MM Size: 4GB
 Cache Size: 1MB
@@ -236,7 +257,7 @@ MM Size = $4\ GB = 2^2 \cdot 2^{30}\ B = 2^{2+30} B = 2^{32}\ B$
 - No. of Tag Bits: P.A. bits - (Line no. bits + offset) = $32 - (8 + 12) = 32 - 20 = 12\ bits$
 
 
-#flashcards/memory/dmm_examples
+#flashcards/memory/direct/examples
 Given the following values, what is the tag directory size?
 MM Size: 4GB
 Cache Size: 1MB
@@ -244,7 +265,7 @@ Block Size: 4 KB
 ?
 - Tag Directory Size = No. of entries $\cdot$ Tag bits = $2^8 \cdot 12 = 3072\ bits$
 
-#flashcards/memory/dmm_examples
+#flashcards/memory/direct/examples
 Given the following values, what is the number of tag bits?
 MM Size: 256 MB
 Cache Size: 512 KB
@@ -256,7 +277,7 @@ Word Size: 1 Byte
 - Cache Size = $512\ KB = 2^9 \cdot 2^{10}\ B = 2^{9+10} B = 2^{19}\ B$
 - No of Tag Bits: $log_2({2^{28}}\div{2^{19}}) = 9\ bits$
 
-#flashcards/memory/dmm_examples
+#flashcards/memory/direct/examples
 Given the following values, what is the cache size?
 Byte-Addressable MB Size: 16 GB
 Block Size: 16 KB
@@ -271,17 +292,17 @@ No. of Cache Lines = 2^10
 Line Size = 2^14 B
 Cache Size = 2^10 $\cdot$ 2^14 B = 2^24 B = 16 MB
 
-#flashcards/memory/memory_hierarchey_and_interfacing
+#flashcards/memory/hierarchy_and_interfacing
 # Memory Interfacing:
 ?
 - Part of Computer Organization.
   - Deals with the way of connecting various level of Memory units to Processor & I/O peripherals.
   - The speed of the processor is counted using the unit MIPS.
 
-#flashcards/memory/memory_hierarchey_and_interfacing
+#flashcards/memory/hierarchy_and_interfacing
 What does MIPS stand for?::Million Instructions Per Second
 
-#flashcards/memory/memory_hierarchey_and_interfacing
+#flashcards/memory/hierarchy_and_interfacing
 If our CPU is connected to multiple levels of memory simultaneously, how would we calculate the average memory access time for the following?
 ?
 - If we have memory units: M1, M2, M3
@@ -291,21 +312,21 @@ If our CPU is connected to multiple levels of memory simultaneously, how would w
 - Hit Ratio:
     - H1, H2, H3
         - H1 > H2 > H3
-?
+        ?
 $H_1 T_1 + ((1-H_1)\cdot H_2) T_2 + ((1-H_1) \cdot (1-H_2))T_3$\
-[^Because the memory units are connected to the CPU simultaneously, which is why these checks will run in parallel]
+        [^Because the memory units are connected to the CPU simultaneously, which is why these checks will run in parallel]
 - So, the time taken to access the data will be the time taken to access the data from the memory unit which has the highest hit ratio.
      - Total no. of Instructions = 100
      - No. of Instructions found in nth level = 80
      - MM's Hit Ratio = 80/100 = 0.8 = 80%
 
 
-#flashcards/memory/memory_hierarchey_and_interfacing
+#flashcards/memory/hierarchy_and_interfacing
 If our CPU is connected to only one level of memory at a time, how would we calculate the average memory access time for the following?
 ?
 $H_1T_1 + ((1-H_1) \cdot H_2) (H_1+T_2) + ((1-H_1) \cdot (1-H_2)) (H_1+T_2+T_3)$
 
-#flashcards/memory/memory_hierarchey_and_interfacing
+#flashcards/memory/hierarchy_and_interfacing
 A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
 - Parallel Organization
 ?
@@ -316,7 +337,7 @@ Assume both the cache and main memory are simultaneously connected to the procce
 | $T_{MM} = 150 \ ns$ |
 | $T_{avg} = H_{cache}T_{cache} + (1-H_{cache})T_{MM} \\ = 0.8 \cdot 30 + (1-0.8)\cdot150 \ ns \\ = 24 + 0.2 \cdot 150 = 54\ ns$ |
 
-#flashcards/memory/memory_hierarchey_and_interfacing
+#flashcards/memory/hierarchy_and_interfacing
 A cache memory needs an access time of 30 ns and main memore of 150 ns, what is the average access time of CPU (assume hit ration = 80%)?
 - Level wise organization
 ?
@@ -330,7 +351,7 @@ Assume only one memory unit is connected to the CPU at a time.
 | $= 0.8 \cdot 30 + (1-0.8)(30+150) \ ns$ |
 | $= 24 + 0.2 \cdot 180 = 24 + 36 = 60\ ns$ |
 
-#flashcards/memory/memory_hierarchey_and_interfacing
+#flashcards/memory/hierarchy_and_interfacing
 Assume that for a certain processor, a read request takes 50 ns on a cache miss and 5 ns on a cache hit.
 - Suppose while running a program, it was observed that 80% of the processor's read requests result in a cache hit.
 - The average read access time in ns is:
@@ -343,7 +364,7 @@ Assume that for a certain processor, a read request takes 50 ns on a cache miss 
 | $= 0.8 \cdot 5 + (1-0.8)\cdot 50\ ns$ |
 | $= 4 + 0.2 \cdot 50 = 4 + 10 = 14\ ns$ |
 
-#flashcards/memory/memory_hierarchey_and_interfacing
+#flashcards/memory/hierarchy_and_interfacing
 Memory Hierarchy: Access Time | Size
 ?
 1. Registers
@@ -351,7 +372,7 @@ Memory Hierarchy: Access Time | Size
 3. Main Memory (D.R.A.M)
 4. Secondary Memory
 
-#flashcards/memory/memory_hierarchey_and_interfacing
+#flashcards/memory/hierarchy_and_interfacing
 Memory Hierarchy: Cost | Usage Frequency
 ?
 1. Secondary Memory
@@ -359,7 +380,7 @@ Memory Hierarchy: Cost | Usage Frequency
 3. S.R.A.M
 4. Registers
 
-#flashcards/memory/dmm_pyqs
+#flashcards/memory/mapping/direct/pyqs
 A direct mapped cache memory of 1 MB has a block size of 256 bytes.
 The cache has an access time of 3 ns and a hit rate of 94%. During a cache miss, it takes 20 ns to bring the first word of a block from the main memory, while each subsequent word takes 5 ns.
 The word size is 64 bits. The average memory access time in ns (round of to 1 decimal place) is:
@@ -378,7 +399,7 @@ $= 2.82 + 10.68 = 13.5\ ns$\
 <br/>
 Answer: 13.5 ns
 
-#flashcards/memory/dmm_pyqs
+#flashcards/memory/mapping/direct/pyqs
 Consider a machine with byte addressable main memory of $2^{20}\ bytes$, lock size of 16 bytes and a direct mapped cache having $2^{12}$ cache lines.
 Let the addresses of two consecutive bytes in main memory be $(E201F)_{16}$ and $(E2020)_{16}$.
 The cache index for the memory address $(E201F)_{16}$.
@@ -400,7 +421,7 @@ $E201F_{16} = 1110\ 0010\ 0000\ 0001\ 1111_2$\
 Tag in Hex = $1110 = E$\
 Cache line address in hex = $0010\ 0000\ 0001 = 201$\
 
-#flashcards/memory/dmm_pyqs
+#flashcards/memory/mapping/direct/pyqs
 Consider a machine with byte addressable memory of $2^{32}\ bytes$ divided into blocks of size 32 bytes. Assume a direct mapped cache having 512 cache lines is used with this machine. The size of tag field bits is:
 ?
 Main Memory Size = $2^{32}\ bytes$\
@@ -413,7 +434,7 @@ No of Line number bits = $log_2\ 2^9 = 9\ bits$
 <br/>
 No of Tag bits = P.A. bits - (Line no. bits + offset) = $32 - (9 + 5) = 32 - 14 = 18\ bits$
 
-#flashcards/memory/dmm_pyqs
+#flashcards/memory/mapping/direct/pyqs
 An 8 KB direct-mapped write-back cache is organized as multiple blocks, each of size 32 bytes.
 The processor generates 32 bit addresses.
 The cache controller maintains the tag information for each cache block comprising of the following.
@@ -437,7 +458,7 @@ Tag directory size $= 21 \cdot 2^8 = 21 \cdot 256 = 5376\\ bits$
 <br/>
 Total size of memory needed at the cache controller to store meta-data (tags) for the cache = 5376 bits
 
-#flashcards/memory/dmm_pyqs
+#flashcards/memory/mapping/direct/pyqs
 Consider a machine with a byte adressable main memory of $2^{16}$ bytes. Assume that a direct mapped data cache consisting of 32 lines of 64 bytes each is used in the system.
 A 50 x 50 two-dimensional array is stored in the main memory starting from memory location 1100H.
 Assume that the data cache is initially empty. The complete array is accessed twice.
@@ -535,10 +556,7 @@ The following table represents the cache memory after the first access of the ar
 - No. of cache misses = 40 + 16 = 56
 - line 4 to line 11
 
-# Hardware Implementation
-Lesson refers to last question in PYQs part 3.
-
-#flashcards/memory/hardware_implementation
+#flashcards/memory/mapping/direct/hardware_implementation
 Tag directory contains as many entries as the number of lines in the cache (true/false)::True
 P.A. bits are the same for all organizations (true/false)::False
 What is the most important part of the tag directory and why is it not the only important part?
@@ -547,7 +565,7 @@ What is the most important part of the tag directory and why is it not the only 
     - Most, not only, because sometimes a few extra bits are added to the tag bits to store additional information.
         - Such as the pyq mentioning 1 valid bit and 1 modified bit.
 
-#flashcards/memory/hardware_implementation
+#flashcards/memory/mapping/direct/hardware_implementation
 What generates tag bits and how do they work?
 ?
 1. With each cache line their are tag bits, specified by the processor, associated to it.
@@ -555,7 +573,7 @@ What generates tag bits and how do they work?
 3. If they're equal it a hit, if not it's a miss.
 
 
-#flashcards/memory/hardware_implementation
+#flashcards/memory/mapping/direct/hardware_implementation
 In the following P.A. split how many multiplexers and comparators are needed, and what type are they?
 Tag bits = 2
 Line bits = 2
@@ -564,7 +582,7 @@ Block/Line offset bits = 2
 - 2 4x1 multiplexers
 - 1 2-bit comparator
 
-#flashcards/memory/hardware_implementation
+#flashcards/memory/mapping/direct/hardware_implementation
 What type of component is the comparator?
 ?
 - XOR Gate
@@ -572,10 +590,10 @@ What type of component is the comparator?
     - If they're not equal, the output will be 1 (cache hit).
 
 
-#flashcards/memory/hardware_implementation
+#flashcards/memory/mapping/direct/hardware_implementation
 ![[DMM HWI - Hit Latency Question.png]]::![[DMM HWI - Hit Latency Answer.png]]
 
-#flashcards/memory/hardware_implementation
+#flashcards/memory/mapping/direct/hardware_implementation
 What is the biggest disadvantage of direct memory mapping and why?
 ?
 - Conflict miss.
@@ -583,9 +601,9 @@ What is the biggest disadvantage of direct memory mapping and why?
     - This is a disadvantage because the first block may be needed again in the near future.
     - Worst case scenario is that the cache is full and the first block is overwritten, then the second block is needed again, and the first block is needed again, but the cache is full so the first block is overwritten again.
         - Shown in bottom example image:
-![[DMM HWI - Disadvantage of DMM.png]]
+        ![[DMM HWI - Disadvantage of DMM.png]]
 
-#flashcards/memory/associative_mapping
+#flashcards/memory/mapping/associative
 MM Size = 2 GB
 Block Size = 4 KB
 Comparator Delay = 15n nanoseconds
@@ -598,3 +616,54 @@ What is the hit latency?
 - Block Offset = $log_2\ 2^{11} = 11\ bits$
 - No. of Tag bits = (31 - 11) = 20 bits
 Hit Latency = $(15 \cdot 20) + 7 = 307\ ns$
+
+#flashcards/memory/mapping/associative
+What are the restrictions regarding assigning blocks to cache lines in associtive mapping::None. Any block can be assign to any of the cache lines
+
+#flashcards/memory/mapping/associative
+Types of associative memory mapping and bullet point:
+?
+- Fully Associative Mapping
+    - Any block can be placed in any cache line
+    - P.A. bits are split into tag bits and block offset bits
+        - The entire P.A. is used as the tag
+        - The block offset bits are used to identify the word in the block
+    - Disadvantages:
+        - Many to many relationship
+            - No clue where to look for the block
+            - During retrieval all of the tags associated to all of the cache lines are judged to find the block
+                - Increases hit latency
+        - Having as many comparators as the cache line working in parallel can be a solution
+            - But this is not practical as it will increase the hardware cost exponentially
+            - Also will increase the heat of the circuitry as well
+- Set Associative Mapping
+    - A compromise between direct and fully associative mapping
+    - Cache is divided into a number of sets
+    - Each set contains a number of lines
+    - A block can be placed in any line of a specific set
+    - P.A. bits are split into tag bits, set bits, and block offset bits
+        - The tag bits are used to identify the block in the cache
+        - The set bits are used to identify the set in the cache
+        - The block offset bits are used to identify the word in the block
+
+#flashcards/memory/mapping/associative/fully/hardware_implementation
+Conceptual Hardware Implementation
+- Assuming there are 4 lines in the cache suppose the generated physical address is 8 bits, and the least significant 2 bits are the block offset.
+- Therefore the remaining 6 bits are being used as the block number. Because in associative mapping the entire P.A. is used as the tag, the 6 bits are the tag bits.
+?
+All 4 lines will be connected to a 6 bit comparator each to which the tag bits of the P.A. bits will be fed parallely.
+The outputs of the comparators will be given as input to a multi-input OR gate so it can indicate a cache hit if any of the lines have the required block.
+Only one cache line will have the block if it is present.
+Cache is very expensive and limited in size.
+Having more than one copy of the same data is not a smart way to utilize the cache.
+One may argue why use an or gate instead of an xor gate.
+It would be more expensive to use a multi-input xor gate and we already spent too much on the comparators.
+- Hit Latency = $T_{n-bit\ comparator} + T_{OR}$
+
+
+
+
+
+
+
+
