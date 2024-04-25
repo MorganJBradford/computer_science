@@ -21,7 +21,7 @@ Primary Memory:
 #flashcards/memory/intro
 Secondary Memory:
 ?
-- It is non-volatile memory | It retains data even when the computer is turned off.
+- It is non-volatile memory (retains data even when the computer is turned off).
 - It is slower than primary memory.
 - Bigger in size.
 - Cost-effective.
@@ -48,7 +48,6 @@ Cache Memory:
 #flashcards/memory/intro
 Memory Mapping Table:
 ?
-
 | | | | Cache Memorry Mapping | | Virtual Memory Mapping | |
 |-|-|-|-|-|-|-|
 | Processor | $\leftrightarrow$ | Cache | $\leftarrow$Words (or blocks)$\rightarrow$ | Main Memory | $\leftarrow Pages \rightarrow$ | Secondary Memory |
@@ -105,7 +104,7 @@ What is the term for when data is not found in the cache memory?::Cache Miss
 What is the term for the time taken to access data from the main memory?::Miss Latency
 What are the 3 Cs?::Compulsory Miss (Cold Start Miss), Conflict Miss (Collision/Interference Miss), Capacity Miss
 
-#flashcards/memory/other_terms
+#flashcards/memory/terms/other
 What is the term for when data is not found in the main memory?::Page fault
 What is the term for the time taken to access data from the secondary memory?::Page fault service time
 What is the term for when data is found in the main memory?::Page hit
@@ -659,11 +658,3 @@ Having more than one copy of the same data is not a smart way to utilize the cac
 One may argue why use an or gate instead of an xor gate.
 It would be more expensive to use a multi-input xor gate and we already spent too much on the comparators.
 - Hit Latency = $T_{n-bit\ comparator} + T_{OR}$
-
-
-
-
-
-
-
-
