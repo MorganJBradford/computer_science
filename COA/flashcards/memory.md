@@ -610,9 +610,9 @@ Delay of Multi-input OR gate = 7 nanoseconds (Fully associative mapping)
 What is the hit latency?
 ?
 - MM Size = $2^1 \cdot 2^{30} = 2^{31} B$
-- P.A. bits = $log_2\ 2^{31} = 31\ bits$
+- P.A. bits = $log_2(2^{31}) = 31\ bits$
 - Block Size = $2^{11} B$
-- Block Offset = $log_2\ 2^{11} = 11\ bits$
+- Block Offset = $log_2(2^{11}) = 11\ bits$
 - No. of Tag bits = (31 - 11) = 20 bits
 Hit Latency = $(15 \cdot 20) + 7 = 307\ ns$
 
@@ -658,3 +658,44 @@ Having more than one copy of the same data is not a smart way to utilize the cac
 One may argue why use an or gate instead of an xor gate.
 It would be more expensive to use a multi-input xor gate and we already spent too much on the comparators.
 - Hit Latency = $T_{n-bit\ comparator} + T_{OR}$
+
+#flashcards/memory/mapping/associative/examples
+MM Size: 4 GB
+Cache Size: 1MB
+Block Size: 4 KB
+Word Size: 1 Byte
+1. P.A. bits' split?
+2. Tag directory size?
+?
+MM Size = $2^2\ bytes \cdot 2^{30}\ bytes = 2^{32}\ bytes$\
+P.A. bits = $log_2(2^{32}) = 32\ bits$\
+Block Size = $2^2\ bytes \cdot 2^{10}\ bytes = 2^{12}\ bytes$\
+Block Offset = $log_2(2^{12}) = 12\ bits$\
+No. of Block in MM = $2^{32}\ bytes \div 2^{12}\ bytes = 2^{20}\ bytes$\
+Block N. bits/No. of Tag bits = $log_2(2^{20}) = 20\ bits$
+- 20 Block No. bits/Tag Bits; 12 bits Block/Line offset\
+Cache Size = $2^{20}\ bytes$\
+1. No. of Line in Cache = $2^{20} \div 2^{12} = 2^8\ bytes$
+2. Tag directory size = $2^8 \cdot 20\ bits$
+    - 5120 bits
+
+#flashcards/memory/mapping/associative/examples
+MM Size: 16 GB
+Block Size: 16 KB
+Word Size: 1 Byte
+1. P.A. bits' split?
+2. Tag Directory Size?
+?
+MM Size = $2^4 \cdot 2^{30}\ bytes = 2^{34}\ bytes$\
+P.A. bits = $log_2(2^{34}) = 34\ bits$\
+Block Size = $2^4 \cdot 2^{10}\ bytes = 2^{14}\ bytes$\
+Block Offset = $log_2(2^{14}) = 14$\
+No. of Blocks = $2^{34}\ bytes \div 2^{14}\ bytes = 2^{20}\ bytes$\
+No. of Block bits = $log_2(2^{20}) = 20\ bits$
+- Fully associative mapping; Tag bits and Block bits are equivalent
+1. 20 Block/Tag bits; 14 block/line offset bits
+2. Unable to determine:
+    - Neither the Cache Size or the No. of Lines in Cache were provided
+    - Tag directory size can't be calculated if we don't know:
+        - How many lines are in the cache
+        - How many bits are being used in order to store the tag information

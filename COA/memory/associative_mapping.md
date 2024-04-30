@@ -62,6 +62,14 @@ It would be more expensive to use a multi-input xor gate and we already spent to
 
 Hit Latency = $T_{n-bit\ comparator} + T_{OR}$
 
+Example:
+MM Size = 2 GB
+Block Size = 2 KB
+Comparator Delay = 15n nanoseconds
+Delay of Multi-input OR gate = 7 nanoseconds
+What is the hit latency?
+
+
 
 
 
