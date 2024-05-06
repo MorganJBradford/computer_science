@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "COA/memory/associative_mapping.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COA/memory/associative_mapping.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COA/memory/associative_mapping.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,16 +125,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "COA/memory/associative_mapping.md"
+                "file": "README.md"
               }
-            }
-          },
-          {
-            "id": "d62d69c10cae23d3",
-            "type": "leaf",
-            "state": {
-              "type": "review-queue-list-view",
-              "state": {}
             }
           },
           {
@@ -142,6 +134,14 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          },
+          {
+            "id": "4a6cfce01ab2d6ba",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
               "state": {}
             }
           }
@@ -161,17 +161,19 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
   "active": "9d69d24bacfd3089",
   "lastOpenFiles": [
+    "README.md~",
+    "4913",
+    "COA.md",
+    "README.md",
+    "COA/memory/associative_mapping.md",
     "COA/memory/associative_mapping.md~",
     "COA/memory/4913",
     "COA/memory/images/Set Associative Mapping - Diagram.png",
-    "COA/memory/associative_mapping.md",
     "COA/memory/images/Set Associative Mapping - Example.png",
     "COA/memory/direct_memory_mapping.md",
     "COA/memory/cache_memory_intro.md",
@@ -190,9 +192,7 @@
     "discrete_math/logical_operators.md~",
     "discrete_math/4913",
     "discrete_math/propositional_logic.md",
-    "discrete_math/propositional_logic.md~",
     "discrete_math/intro.md",
-    "discrete_math/intro.md~",
     "COA/memory/memory_hierarchy_and_interfacing.md",
     "COA/memory/images/Memory Hierarchy.png",
     "COA/memory/memory_intro.md",
