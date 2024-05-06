@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b1c8ee60a06109f8",
+        "id": "c196206e6d734893",
         "type": "tabs",
         "children": [
           {
-            "id": "9d69d24bacfd3089",
+            "id": "4291138847328cbf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "COA/memory/associative_mapping.md",
-                "mode": "preview",
+                "file": "COA/flashcards/memory/mapping_examples.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COA/memory/associative_mapping.md",
+                "file": "COA/flashcards/memory/mapping_examples.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COA/memory/associative_mapping.md",
+                "file": "COA/flashcards/memory/mapping_examples.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "COA/memory/associative_mapping.md"
+                "file": "COA/flashcards/memory/mapping_examples.md"
               }
             }
           },
@@ -164,8 +164,15 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "9d69d24bacfd3089",
+  "active": "12eebd9e7018ca48",
   "lastOpenFiles": [
+    "COA/flashcards/memory/mapping_examples.md~",
+    "COA/flashcards/memory/4913",
+    "COA/memory/images/GATE CS 2014.png",
+    "COA/flashcards/memory/mapping_pyqs.md~",
+    "COA/memory/images/Cache Size Formula - Example.png",
+    "COA/memory/associative_mapping.md",
+    "COA/flashcards/memory/mapping_examples.md",
     "COA/index.md~",
     "COA/4913",
     "COA/index.md",
@@ -190,17 +197,12 @@
     "COA/flashcards/architecture/classifications.md~",
     "COA/flashcards/architecture/4913",
     "COA/flashcards/architecture/classifications.md",
-    "COA/flashcards/architecture/history.md~",
     "COA/flashcards/architecture/history.md",
-    "COA/flashcards/architecture/basics.md~",
     "COA/flashcards/architecture/basics.md",
-    "COA/flashcards/architecture",
     "COA/flashcards/memory.md",
     "COA/flashcards/memory_index.md",
     "COA/flashcards/memory/hardware_implementation.md",
     "COA/flashcards/memory/hierarchy_and_interfacing.md",
-    "COA/flashcards/memory/mapping_examples.md",
-    "COA/flashcards/memory/mapping_pyqs.md",
     "COA/memory/images/Set Associative Mapping - Diagram.png",
     "COA/memory/images/Set Associative Mapping - Example.png",
     "COA/memory/images/DMM HWI - 6 bit.png",
@@ -208,8 +210,6 @@
     "COA/memory/images/DMM - P.A. bit Diagram.png",
     "COA/memory/images/DMM HWI - Hit Latency Answer.png",
     "COA/memory/images/DMM HWI - Hit Latency Question.png",
-    "COA/memory/images/Memory Hierarchy.png",
-    "COA/memory/images/Memory Interfacing Diagram.png",
-    "COA/memory/images/DMM HWI - Disadvantage of DMM.png"
+    "COA/memory/images/Memory Hierarchy.png"
   ]
 }
