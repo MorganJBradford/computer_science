@@ -69,21 +69,20 @@ Comparator Delay = 15n nanoseconds
 Delay of Multi-input OR gate = 7 nanoseconds
 What is the hit latency?
 
-
-
-
-
-
-
-
-
 ### Set Associative Mapping
-    - A compromise between direct and fully associative mapping
-    - Cache is divided into a number of sets
-    - Each set contains a number of lines
-    - A block can be placed in any line of a specific set
-    - P.A. bits are split into tag bits, set bits, and block offset bits
-        - The tag bits are used to identify the block in the cache
-        - The set bits are used to identify the set in the cache
-        - The block offset bits are used to identify the word in the block
+- A compromise between direct and fully associative mapping
+- Cache is divided into a number of sets
+- Each set contains a number of lines
+- A block can be placed in any line of a specific set
+- P.A. bits are split into tag bits, set bits, and block offset bits
+    - The tag bits are used to identify the block in the cache
+    - The set bits are used to identify the set in the cache
+    - The block offset bits are used to identify the word in the block
+- k-way set associative mapping
+    - k lines in each set
+    - k = 1 is direct mapping
+    - k = number of lines in the cache is fully associative mapping
 
+![[Set Associative Mapping - Diagram.png]]
+
+![[Set Associative Mapping - Example.png]]
