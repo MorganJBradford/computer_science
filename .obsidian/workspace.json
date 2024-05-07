@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "COA/flashcards/memory/mapping_examples.md",
+                "file": "COA/flashcards/memory/mapping_pyqs.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COA/flashcards/memory/mapping_examples.md",
+                "file": "COA/flashcards/memory/mapping_pyqs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COA/flashcards/memory/mapping_examples.md",
+                "file": "COA/flashcards/memory/mapping_pyqs.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "COA/flashcards/memory/mapping_examples.md"
+                "file": "COA/flashcards/memory/mapping_pyqs.md"
               }
             }
           },
@@ -164,18 +164,18 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "12eebd9e7018ca48",
+  "active": "4291138847328cbf",
   "lastOpenFiles": [
-    "COA/flashcards/memory/mapping_examples.md~",
-    "COA/flashcards/memory/4913",
-    "COA/memory/images/GATE CS 2014.png",
     "COA/flashcards/memory/mapping_pyqs.md~",
+    "COA/flashcards/memory/4913",
+    "COA/index.md",
+    "COA/flashcards/memory/mapping_examples.md",
+    "COA/flashcards/memory/mapping_examples.md~",
+    "COA/memory/images/GATE CS 2014.png",
     "COA/memory/images/Cache Size Formula - Example.png",
     "COA/memory/associative_mapping.md",
-    "COA/flashcards/memory/mapping_examples.md",
     "COA/index.md~",
     "COA/4913",
-    "COA/index.md",
     "COA/memory/direct_mapping.md",
     "COA/memory/cache_intro.md",
     "COA/intro.md",

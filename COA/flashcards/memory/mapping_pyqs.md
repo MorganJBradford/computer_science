@@ -197,3 +197,56 @@ Line No./Index bits = $log_2(2^{14-4}) = 10$
 P.A. bits = 32
 Tag bits = $32 - 4 = 28$
 - D: 28 bits and 0 bits
+
+#flashcards/memory/mapping/associative/set/pyqs
+A block-set associative cache memory consists of 128 blocks divided into four block sets.
+The main memory consists of 16,384 blocks and each block contains 256 eight bit words.
+1. How many bits are required for addressing the main memory?
+2. How many bits are needed to represent the TAG, SET and WORD fields?
+?
+No. of Cache Lines = 128 = $2^7$
+No. of MM Blocks = 12384 = $2^{14}$
+No. of Words per Block = 256
+Block Size = $256 \cdot 1\ B = 256\ B = 2^8\ B$
+MM Size = $2^8\ words \cdot 2^{14}\ blocks = 2^{22}\ bytes$
+1. P.A. bits = 22
+WORD = 8 bits
+4-way Set Associative
+No of Sets = $2^{(7-2)} = 2^5$
+2. 9 tag bits; 5 Set bits; 8 WORD bits.
+
+#flashcards/memory/mapping/associative/set/pyqs
+A computer has a 256 KB, 4-way set associative, write back data cache with block size of 32 B.
+The processor sends 32 bit addresses to the cache controller.
+Each cache tag directory entry contains, in addition to address tag, 2 valid bits, 1 modified bit and 1 replacement bit.
+1. The number of bits in the tag field of an address is
+    a) 11
+    b) 14
+    c) 16
+    d) 27
+2. The size of the cache tag directory is
+    a) 160 Kbits
+    b) 136 bits
+    c) 40 Kbits
+    d) 32 bits
+?
+P.A bits = 32
+Block Size = $32\ B = 2^5\ B$
+B/L Offset = 5
+Cache Size = 256 KB = $2^8 \cdot 2^{10} = 2^{18}\ bytes$
+No. of Lines = $2^{(18-5)} = 2^{13}$
+No. of Sets = $2^{(13-2)} = 2^{11}$
+Tag bits = 16 bits
+1. 16 bits
+Tag directory entry = $16 + 2 + 1 + 1 = 20\ bits$
+Tag directory size = $2^{13} \cdot 20\ bits = 2^{13} \cdot 2^1 \cdot 10\ bits = 2^{14} \cdot 10\ bits = 2^4 \cdot 10 \cdot 2^{10}\ bits = 160\ Kbits$
+2. 160 Kbits
+
+#flashcards/memory/mapping/associative/set/pyqs
+4-way Set Associative Cache
+No. of Lines: 128
+Line Size: 64 words
+P.A. bits: 20
+- P.A. split?
+?
+- 9 Tag bits; Set No. bits 5; B/L Offset bits 6.
