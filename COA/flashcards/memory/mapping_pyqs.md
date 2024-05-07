@@ -249,4 +249,23 @@ Line Size: 64 words
 P.A. bits: 20
 - P.A. split?
 ?
-- 9 Tag bits; Set No. bits 5; B/L Offset bits 6.
+No. of Lines = 128 = $2^7$
+Line Size = 64 words = $2^6\ words$
+P.A. bits = 20 bits
+Block Offset = 6
+No. of Sets = $2^{(7-2)} = 2^5$
+Tag bits = P.A. bits - (Set No. bits + B/L Offset bits) = $20 - (5 + 6) = 20 - 11 = 9\ bits$
+- P.A. split: 9 Tag bits; Set No. bits 5; B/L Offset bits 6.
+
+#flashcards/memory/mapping/associative/set/pyqs
+In a k-way set associative cache, the cache is divided into v sets, each of which consist of k lines.
+The lines of a set are placed in sequence one after another.
+The lines in set s are sequenced before the lines in set (s+1). The main memory blocks are numbered 0 onwards.
+The main memory block numbered j must be mapped to any one of the cache lines from:
+a) $(j \mathbin{\%} v) \cdot k\ to\ (j \mathbin{\%} v) \cdot k + (k - 1)$
+b) $(j \mathbin{\%} v)\ to\ (j \mathbin{\%} v) + (k - 1)$
+c) $(j \mathbin{\%} k)\ to\ (j \mathbin{\%} k) + (v - 1)$
+d) $(j \mathbin{\%} k) \cdot v\ to\ (j \mathbin{\%} k) \cdot v + (v - 1)$
+?
+- $(j \mathbin{\%} v) \cdot k\ to\ (j \mathbin{\%} v) \cdot k + (k - 1)$
+Refactor question using [this](https://www.youtube.com/watch?v=AByFL521DRg&list=PLBlnK6fEyqRjdT1xkkBZSXKwFKqQoYhwy&index=18) explanation.
