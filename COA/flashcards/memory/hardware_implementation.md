@@ -65,3 +65,9 @@ Having more than one copy of the same data is not a smart way to utilize the cac
 One may argue why use an or gate instead of an xor gate.
 It would be more expensive to use a multi-input xor gate and we already spent too much on the comparators.
 - Hit Latency = $T_{n-bit\ comparator} + T_{OR}$
+
+#flashcards/memory/mapping/associative/set
+What is the general calculation for multiplexers in k-way set associative?
+?
+k-way set associative, s-set bits, t-tag bits
+$(t \cdot k)\ 2^s\ to\ 1\ MUXs$

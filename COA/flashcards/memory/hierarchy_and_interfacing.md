@@ -30,7 +30,7 @@ $H_1 T_1 + ((1-H_1)\cdot H_2) T_2 + ((1-H_1) \cdot (1-H_2))T_3$\
         [^Because the memory units are connected to the CPU simultaneously, which is why these checks will run in parallel]
 - So, the time taken to access the data will be the time taken to access the data from the memory unit which has the highest hit ratio.
      - Total no. of Instructions = 100
-     - No. of Instructions found in nth level = 80
+     - # of Instructions found in nth level = 80
      - MM's Hit Ratio = 80/100 = 0.8 = 80%
 
 

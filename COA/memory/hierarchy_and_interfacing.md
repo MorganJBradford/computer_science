@@ -57,7 +57,7 @@ Effective/Average Memory Access Time ($T_{avg}$):
     - So, the time taken to access the data will be the time taken to access the data from the memory unit which has the highest hit ratio.
 - Total no. of Instructions = 100
 - Example:
-    - No. of Instructions found in nth level = 80
+    - # of Instructions found in nth level = 80
     - MM's Hit Ratio = 80/100 = 0.8 = 80%
 
 <dl>

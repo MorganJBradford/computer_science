@@ -29,7 +29,7 @@ Byte-Addressable Memory: 1 word = 1 Byte
 ### Main Memory
 - Main Memory Size: 64 words i.e. (0, 1, ..., 63)
 - Block size: 4 words
-- No. of Blocks in MM: 64/4 = 16
+- # of Blocks in MM: 64/4 = 16
 
 | | | | | |
 |-|-|-|-|-|
@@ -60,7 +60,7 @@ $2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0 = 0 + 16 + 8 + 4 + 2 + 1 = 31$
 - Cache Size: 16 words
 - Block size: 4 words
 - Line size: 4 words
-- No. of Lines in Cache: 16/4 = 4
+- # of Lines in Cache: 16/4 = 4
 
 How many bits are needed to address each line?: $log_2\ 4 = log_2\ 2^2 = 2$ bits
 

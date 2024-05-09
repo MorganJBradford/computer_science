@@ -52,13 +52,13 @@ What is a Tag Directory?
 ?
 - A data structure that helps the processor find out whether the data is present in the cache memory or not.
 - Primarily keeps the record of the Tag bits, cache line-wise.
-- No. of entries = No. of Cache lines.
+- # of entries = # of Cache lines.
 
 #flashcards/memory/mapping/direct
 Given the following values please provide the calculation for determining the number of bits required to address each block.
 - Main Memory Size: 64 words i.e. (0, 1, ..., 63)
 - Block size: 4 words
-- No. of Blocks in MM: 64/4 = 16
+- # of Blocks in MM: 64/4 = 16
 | | | | | |
 |-|-|-|-|-|
 | __1:__ | 0 | 1 | 2 | 3 |
@@ -80,7 +80,7 @@ What is the hit latency?
 - P.A. bits = $log_2(2^{31}) = 31\ bits$
 - Block Size = $2^{11} B$
 - Block Offset = $log_2(2^{11}) = 11\ bits$
-- No. of Tag bits = (31 - 11) = 20 bits
+- # of Tag bits = (31 - 11) = 20 bits
 Hit Latency = $(15 \cdot 20) + 7 = 307\ ns$
 
 #flashcards/memory/mapping/associative

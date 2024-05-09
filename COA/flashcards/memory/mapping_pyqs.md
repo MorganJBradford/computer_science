@@ -1,6 +1,12 @@
 ---
 id: mapping_pyqs
 aliases: []
+tags: []
+---
+
+- [ ] ---
+id: mapping_pyqs
+aliases: []
 tags:
   - flalshcards/memory
 ---
@@ -31,15 +37,15 @@ The cache index for the memory address $(E201F)_{16}$.
 What are the tag and cache line address (in hex) for main memory address $(E201F)_{16}$?
 ?
 Main Memory Size = $2^{20}\ bytes$\
-No. of P.A. bits = $log_2\ 2^{20} = 20\ bits$\
+# of P.A. bits = $log_2\ 2^{20} = 20\ bits$\
 <br/>
 Block Size = 16 bytes\
 Block Offset = $log_2\ 16 = 4\ bits$\
 <br/>
-No. of Cache Lines = $2^{12}$\
+# of Cache Lines = $2^{12}$\
 No of Line number bits= $log_2\ 2^{12} = 12\ bits$\
 <br/>
-No of Tag bits = P.A. bits - (Line no. bits + offset) = $20 - (12 + 4) = 20 - 16 = 4\ bits$
+No of Tag bits = P.A. bits - (Line # bits + offset) = $20 - (12 + 4) = 20 - 16 = 4\ bits$
 <br/>
 $E201F_{16} = 1110\ 0010\ 0000\ 0001\ 1111_2$\
 <br/>
@@ -50,14 +56,14 @@ Cache line address in hex = $0010\ 0000\ 0001 = 201$\
 Consider a machine with byte addressable memory of $2^{32}\ bytes$ divided into blocks of size 32 bytes. Assume a direct mapped cache having 512 cache lines is used with this machine. The size of tag field bits is:
 ?
 Main Memory Size = $2^{32}\ bytes$\
-No. of P.A. bits = $log_2\ 2^{32} = 32\ bits$\
+# of P.A. bits = $log_2\ 2^{32} = 32\ bits$\
 <br/>
 Block Size = 32 B = $2^5\ bytes$\
 <br/>
-No. of cache lines = 512 = $2^9$\
+# of cache lines = 512 = $2^9$\
 No of Line number bits = $log_2\ 2^9 = 9\ bits$
 <br/>
-No of Tag bits = P.A. bits - (Line no. bits + offset) = $32 - (9 + 5) = 32 - 14 = 18\ bits$
+No of Tag bits = P.A. bits - (Line # bits + offset) = $32 - (9 + 5) = 32 - 14 = 18\ bits$
 
 #flashcards/memory/mapping/direct/pyqs
 An 8 KB direct-mapped write-back cache is organized as multiple blocks, each of size 32 bytes.
@@ -72,11 +78,11 @@ Cache size = 8 KB = $2^3 \cdot 2^{10} = 2^{3+10} = 2^{13}\ bytes$\
 Block size = 32 bytes = $2^5\ bytes$\
 Block offset = $log_2\ 32 = 5\ bits$\
 <br/>
-No. of cache lines = $\frac{2^{13}}{2^5} = 2^{13-5} = 2^8$\
+# of cache lines = $\frac{2^{13}}{2^5} = 2^{13-5} = 2^8$\
 No of Line number bits = $log_2\ 2^8 = 8\ bits$\
 <br/>
-No. of P.A. bits = $log_2\ 2^{32} = 32\ bits$\
-No of Tag bits = P.A. bits - (Line no. bits + offset) = $32 - (8 + 5) = 32 - 13 = 19\\ bits$\
+# of P.A. bits = $log_2\ 2^{32} = 32\ bits$\
+No of Tag bits = P.A. bits - (Line # bits + offset) = $32 - (8 + 5) = 32 - 13 = 19\\ bits$\
 <br/>
 Tag directory entriy $= 1 + 1 + 19 = 21\ bits$\
 Tag directory size $= 21 \cdot 2^8 = 21 \cdot 256 = 5376\\ bits$
@@ -102,22 +108,22 @@ c) line 0 to line 7
 d) line 0 to line 8
 ?
 Main Memory Size = $2^{16}\ bytes$\
-No. of P.A. bits = $log_2\ 2^{16} = 16\ bits$\
+# of P.A. bits = $log_2\ 2^{16} = 16\ bits$\
 <br/>
 Block Size = 64 B = $2^6\ bytes$\
 Block offset = $log_2\ 64 = 6\ bits$\
 <br/>
-No. of cache lines = 32\
+# of cache lines = 32\
 No of Line number bits = $log_2\ 32 = 5\ bits$\
 <br/>
-No of Tag bits = P.A. bits - (Line no. bits + offset) = $16 - (5 + 6) = 16 - 11 = 5\ bits$\
+No of Tag bits = P.A. bits - (Line # bits + offset) = $16 - (5 + 6) = 16 - 11 = 5\ bits$\
 <br/>
 Total number. of elements in the array = $50 \cdot 50 = 2500$\
 Element size = 1 byte
 Array size = 2500 bytes
-No. of blocks to store in the array = $\frac{2500}{64} = 39.0625$\
+# of blocks to store in the array = $\frac{2500}{64} = 39.0625$\
 Blocks are divided equally and we can't use 39.0625 blocks, so we use 40 blocks
-No. of blocks = 40
+# of blocks = 40
 <br/>
 P.A. Split
 | | $\leftarrow 16\ bits \rightarrow$ | |
@@ -178,7 +184,7 @@ The following table represents the cache memory after the first access of the ar
 | 31 | $b_{27}$ | |
 - Second iteration cache misses is 16 because the cache is full.
 <br/>
-- No. of cache misses = 40 + 16 = 56
+- # of cache misses = 40 + 16 = 56
 - line 4 to line 11
 
 #flashcards/memory/mapping/associative/fully/pyqs
@@ -193,7 +199,7 @@ D) 28 bits and 0 bits
 Cache Size = $2^4 \cdot 2^{10} = 2^{14}$ bytes
 Block Size = $16\ B = 2^4\ B$
 Block Offset = 4
-Line No./Index bits = $log_2(2^{14-4}) = 10$
+Line #/Index bits = $log_2(2^{14-4}) = 10$
 P.A. bits = 32
 Tag bits = $32 - 4 = 28$
 - D: 28 bits and 0 bits
@@ -204,9 +210,9 @@ The main memory consists of 16,384 blocks and each block contains 256 eight bit 
 1. How many bits are required for addressing the main memory?
 2. How many bits are needed to represent the TAG, SET and WORD fields?
 ?
-No. of Cache Lines = 128 = $2^7$
-No. of MM Blocks = 12384 = $2^{14}$
-No. of Words per Block = 256
+# of Cache Lines = 128 = $2^7$
+# of MM Blocks = 12384 = $2^{14}$
+# of Words per Block = 256
 Block Size = $256 \cdot 1\ B = 256\ B = 2^8\ B$
 MM Size = $2^8\ words \cdot 2^{14}\ blocks = 2^{22}\ bytes$
 1. P.A. bits = 22
@@ -234,8 +240,8 @@ P.A bits = 32
 Block Size = $32\ B = 2^5\ B$
 B/L Offset = 5
 Cache Size = 256 KB = $2^8 \cdot 2^{10} = 2^{18}\ bytes$
-No. of Lines = $2^{(18-5)} = 2^{13}$
-No. of Sets = $2^{(13-2)} = 2^{11}$
+# of Lines = $2^{(18-5)} = 2^{13}$
+# of Sets = $2^{(13-2)} = 2^{11}$
 Tag bits = 16 bits
 1. 16 bits
 Tag directory entry = $16 + 2 + 1 + 1 = 20\ bits$
@@ -244,18 +250,18 @@ Tag directory size = $2^{13} \cdot 20\ bits = 2^{13} \cdot 2^1 \cdot 10\ bits = 
 
 #flashcards/memory/mapping/associative/set/pyqs
 4-way Set Associative Cache
-No. of Lines: 128
+# of Lines: 128
 Line Size: 64 words
 P.A. bits: 20
 - P.A. split?
 ?
-No. of Lines = 128 = $2^7$
+# of Lines = 128 = $2^7$
 Line Size = 64 words = $2^6\ words$
 P.A. bits = 20 bits
 Block Offset = 6
-No. of Sets = $2^{(7-2)} = 2^5$
-Tag bits = P.A. bits - (Set No. bits + B/L Offset bits) = $20 - (5 + 6) = 20 - 11 = 9\ bits$
-- P.A. split: 9 Tag bits; Set No. bits 5; B/L Offset bits 6.
+# of Sets = $2^{(7-2)} = 2^5$
+Tag bits = P.A. bits - (Set # bits + B/L Offset bits) = $20 - (5 + 6) = 20 - 11 = 9\ bits$
+- P.A. split: 9 Tag bits; Set # bits 5; B/L Offset bits 6.
 
 #flashcards/memory/mapping/associative/set/pyqs
 In a k-way set associative cache, the cache is divided into v sets, each of which consist of k lines.
@@ -269,3 +275,68 @@ d) $(j \mathbin{\%} k) \cdot v\ to\ (j \mathbin{\%} k) \cdot v + (v - 1)$
 ?
 - $(j \mathbin{\%} v) \cdot k\ to\ (j \mathbin{\%} v) \cdot k + (k - 1)$
 Refactor question using [this](https://www.youtube.com/watch?v=AByFL521DRg&list=PLBlnK6fEyqRjdT1xkkBZSXKwFKqQoYhwy&index=18) explanation.
+
+#flashcards/memory/mapping/all/pyqs
+Consider two cache organizations: The first one is 32 KB 2-way set associative with 32-byte block size.
+The second one is of the same size but direct mapped. The size of an address is 32 bits in both cases.
+A 2-to-1 multiplexer has a latency of 0.6 ns while a kbit comparator has a latency of k/10 ns.
+The hit latency of the set associative organization is h1 while that of the direct mapped one is h2.
+1. The value of h1 is:
+    a) 2.4 ns
+    b) 2.3 ns
+    c) 1.8 ns
+    d) 1.7 ns
+2. The value of h2 is:
+    a) 2.4 ns
+    b) 2.3 ns
+    c) 1.8 ns
+    d) 1.7 ns
+?
+Cache size = $32\ KB = 2^{15}\ B$
+Block Size = $32\ B = 2^5\ B$
+Block offset = 5 bits
+Set Size = 2 lines
+# of lines = $2^{(15-5)} = 2^{10}$
+# of sets = $2^{(10-1)} = 2^9$
+- 18 tag bits; 9 set bits; 5 B/L bits.
+    - $2^9 \cdot 1$ MUX
+    - How many?
+        - 2 lines per set. 18 bits for the tags. Both lines inside each set will have 18 tag bits associated to each of them. With each input line of the MUX in can only read a single bit. For 18 bits, we will need 18 $2^9 \cdot 1$ MUX.
+        - Moreover, it's a 2-way set associative, meaning we need to refer to all of the tags of all of the lines belonging to the same set.
+            - $18 \cdot 2 = 36$ MUX
+                - We need 36 $2^9 \cdot 1\ MUX$
+Since we are using 18 bits for tags and it's 2-way set associative cache organization, we will need 2 18-bit comparators. The output of these two will be fed into an or gate.
+2 input OR Gate
+| A | B | O/P |
+|-|-|-|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+$$
+\overline{A}B + A\overline{B} + AB
+= \overline{A}B + A\ (\overline{B}+B)
+= \overline{A}(B) + A(1)
+$$
+Multiplexers are functionally complete, so we can implement any of the above boolean functions.
+In this scenario, if we consider B to be $I_0$ and 1 to be $I_1$ and keeping A for the select line, in that case when A will be low B or $I_0$ will be selected, and when A is high, 1 will be selected.
+Thus, using this 2-to-1 multiplexer this function can be implemented. This is why the question has the 2-to-1 MUX which will replace the OR gate in the circuitry.
+k = 18.
+Comparator latency = 18/10 ns = 1.8 ns
+1. 2.4 ns
+    - 1.8 + 2-to-1 hit latency
+        -   $1.8 + 0.6 = 2.4\ ns$
+P.A. bits = 32
+- P.A. split
+    - 17 tag bits; 10 Line # bits; 5 B/L offset bits.
+Line bits will be used as select lines for the MUX.
+    - $2^{10} \cdot 1$ MUX
+    - 17 needed
+    - single 17-bit comparator needed
+        - Latency = 17/10 ns
+            - 1.7 ns
+2. 1.7 ns
+[^ Super confused about the boolean algebra section. Need to review before adding this card. Card unfinished due to skill issue.]
+Refactor with [this](https://www.youtube.com/watch?v=F_gOWc50MtI&list=PLBlnK6fEyqRjdT1xkkBZSXKwFKqQoYhwy&index=20)
+
+#flashcards/memory/mapping/associative/set/pyqs

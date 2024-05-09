@@ -28,7 +28,7 @@ Associative mapping 20 tag bits.
 4-way set associative 13 tag bits.
 
 ## Cache Lines
-No. of cache lines is a sole property of the cache that depends on the size of the line or the block. It has nothing to do with the mapping technique.
+# of cache lines is a sole property of the cache that depends on the size of the line or the block. It has nothing to do with the mapping technique.
 Therefore, the number of cache lines will remain the same for all of the different cache mapping techniques:
 $2^{11}$
 
