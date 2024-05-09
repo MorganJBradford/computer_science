@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "COA/flashcards/memory/mapping_pyqs.md",
+                "file": "COA/memory/cache_mapping.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COA/flashcards/memory/mapping_pyqs.md",
+                "file": "COA/memory/cache_mapping.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COA/flashcards/memory/mapping_pyqs.md",
+                "file": "COA/memory/cache_mapping.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "COA/flashcards/memory/mapping_pyqs.md"
+                "file": "COA/memory/cache_mapping.md"
               }
             }
           },
@@ -164,8 +164,16 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "4291138847328cbf",
+  "active": "12eebd9e7018ca48",
   "lastOpenFiles": [
+    "COA/memory/cache_mapping.md~",
+    "COA/memory/4913",
+    "COA/memory/images/Cache Memory Mapping - Comparative Study Intro.png",
+    "COA/memory/images/Cache Memory Mapping - Comparative Study.png",
+    "COA/memory/cache_mapping.md",
+    "COA/flashcards/memory/mapping_pyqs.md",
+    "COA/index.md~",
+    "COA/4913",
     "COA/flashcards/memory/mapping_pyqs.md~",
     "COA/flashcards/memory/4913",
     "COA/index.md",
@@ -174,8 +182,6 @@
     "COA/memory/images/GATE CS 2014.png",
     "COA/memory/images/Cache Size Formula - Example.png",
     "COA/memory/associative_mapping.md",
-    "COA/index.md~",
-    "COA/4913",
     "COA/memory/direct_mapping.md",
     "COA/memory/cache_intro.md",
     "COA/intro.md",
@@ -194,22 +200,16 @@
     "COA/flashcards/memory_index.md~",
     "COA/flashcards/architecture_index.md",
     "COA/flashcards/memory/intro.md",
-    "COA/flashcards/architecture/classifications.md~",
-    "COA/flashcards/architecture/4913",
     "COA/flashcards/architecture/classifications.md",
     "COA/flashcards/architecture/history.md",
     "COA/flashcards/architecture/basics.md",
     "COA/flashcards/memory.md",
     "COA/flashcards/memory_index.md",
-    "COA/flashcards/memory/hardware_implementation.md",
-    "COA/flashcards/memory/hierarchy_and_interfacing.md",
     "COA/memory/images/Set Associative Mapping - Diagram.png",
     "COA/memory/images/Set Associative Mapping - Example.png",
     "COA/memory/images/DMM HWI - 6 bit.png",
     "COA/memory/images/DMM Hardware Implementation (HWI).png",
     "COA/memory/images/DMM - P.A. bit Diagram.png",
-    "COA/memory/images/DMM HWI - Hit Latency Answer.png",
-    "COA/memory/images/DMM HWI - Hit Latency Question.png",
-    "COA/memory/images/Memory Hierarchy.png"
+    "COA/memory/images/DMM HWI - Hit Latency Answer.png"
   ]
 }
