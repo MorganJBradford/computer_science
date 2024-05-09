@@ -1,11 +1,17 @@
 ---
 id: index
 aliases: []
+tags: []
+---
+
+- [ ] ---
+id: index
+aliases: []
 tags:
   - index
 ---
 
-# [[Intro]]
+# [Intro](intro.md)
 ## Architecture
 1. [Basics](architecture_basics.md)
 2. [Classifications](architecture_classifications.md)
@@ -16,3 +22,4 @@ tags:
 4. [Direct Mapping](direct_mapping.md)
 5. [Associative Mapping](associative_mapping.md)
 6. [Cache Mapping](cache_mapping.md)
+7. [Cache Design](cache_design.md)
