@@ -37,12 +37,12 @@ The cache index for the memory address $(E201F)_{16}$.
 What are the tag and cache line address (in hex) for main memory address $(E201F)_{16}$?
 ?
 Main Memory Size = $2^{20}\ bytes$\
-# of P.A. bits = $log_2\ 2^{20} = 20\ bits$\
+\# of P.A. bits = $log_2\ 2^{20} = 20\ bits$\
 <br/>
 Block Size = 16 bytes\
 Block Offset = $log_2\ 16 = 4\ bits$\
 <br/>
-# of Cache Lines = $2^{12}$\
+\# of Cache Lines = $2^{12}$\
 No of Line number bits= $log_2\ 2^{12} = 12\ bits$\
 <br/>
 No of Tag bits = P.A. bits - (Line # bits + offset) = $20 - (12 + 4) = 20 - 16 = 4\ bits$
@@ -56,11 +56,11 @@ Cache line address in hex = $0010\ 0000\ 0001 = 201$\
 Consider a machine with byte addressable memory of $2^{32}\ bytes$ divided into blocks of size 32 bytes. Assume a direct mapped cache having 512 cache lines is used with this machine. The size of tag field bits is:
 ?
 Main Memory Size = $2^{32}\ bytes$\
-# of P.A. bits = $log_2\ 2^{32} = 32\ bits$\
+\# of P.A. bits = $log_2\ 2^{32} = 32\ bits$\
 <br/>
 Block Size = 32 B = $2^5\ bytes$\
 <br/>
-# of cache lines = 512 = $2^9$\
+\# of cache lines = 512 = $2^9$\
 No of Line number bits = $log_2\ 2^9 = 9\ bits$
 <br/>
 No of Tag bits = P.A. bits - (Line # bits + offset) = $32 - (9 + 5) = 32 - 14 = 18\ bits$
@@ -78,10 +78,10 @@ Cache size = 8 KB = $2^3 \cdot 2^{10} = 2^{3+10} = 2^{13}\ bytes$\
 Block size = 32 bytes = $2^5\ bytes$\
 Block offset = $log_2\ 32 = 5\ bits$\
 <br/>
-# of cache lines = $\frac{2^{13}}{2^5} = 2^{13-5} = 2^8$\
+\# of cache lines = $\frac{2^{13}}{2^5} = 2^{13-5} = 2^8$\
 No of Line number bits = $log_2\ 2^8 = 8\ bits$\
 <br/>
-# of P.A. bits = $log_2\ 2^{32} = 32\ bits$\
+\# of P.A. bits = $log_2\ 2^{32} = 32\ bits$\
 No of Tag bits = P.A. bits - (Line # bits + offset) = $32 - (8 + 5) = 32 - 13 = 19\\ bits$\
 <br/>
 Tag directory entriy $= 1 + 1 + 19 = 21\ bits$\
@@ -108,12 +108,12 @@ c) line 0 to line 7
 d) line 0 to line 8
 ?
 Main Memory Size = $2^{16}\ bytes$\
-# of P.A. bits = $log_2\ 2^{16} = 16\ bits$\
+\# of P.A. bits = $log_2\ 2^{16} = 16\ bits$\
 <br/>
 Block Size = 64 B = $2^6\ bytes$\
 Block offset = $log_2\ 64 = 6\ bits$\
 <br/>
-# of cache lines = 32\
+\# of cache lines = 32\
 No of Line number bits = $log_2\ 32 = 5\ bits$\
 <br/>
 No of Tag bits = P.A. bits - (Line # bits + offset) = $16 - (5 + 6) = 16 - 11 = 5\ bits$\
@@ -121,9 +121,9 @@ No of Tag bits = P.A. bits - (Line # bits + offset) = $16 - (5 + 6) = 16 - 11 = 
 Total number. of elements in the array = $50 \cdot 50 = 2500$\
 Element size = 1 byte
 Array size = 2500 bytes
-# of blocks to store in the array = $\frac{2500}{64} = 39.0625$\
+\# of blocks to store in the array = $\frac{2500}{64} = 39.0625$\
 Blocks are divided equally and we can't use 39.0625 blocks, so we use 40 blocks
-# of blocks = 40
+\# of blocks = 40
 <br/>
 P.A. Split
 | | $\leftarrow 16\ bits \rightarrow$ | |
@@ -184,7 +184,7 @@ The following table represents the cache memory after the first access of the ar
 | 31 | $b_{27}$ | |
 - Second iteration cache misses is 16 because the cache is full.
 <br/>
-- # of cache misses = 40 + 16 = 56
+- \# of cache misses = 40 + 16 = 56
 - line 4 to line 11
 
 #flashcards/memory/mapping/associative/fully/pyqs
@@ -210,9 +210,9 @@ The main memory consists of 16,384 blocks and each block contains 256 eight bit 
 1. How many bits are required for addressing the main memory?
 2. How many bits are needed to represent the TAG, SET and WORD fields?
 ?
-# of Cache Lines = 128 = $2^7$
-# of MM Blocks = 12384 = $2^{14}$
-# of Words per Block = 256
+\# of Cache Lines = 128 = $2^7$
+\# of MM Blocks = 12384 = $2^{14}$
+\# of Words per Block = 256
 Block Size = $256 \cdot 1\ B = 256\ B = 2^8\ B$
 MM Size = $2^8\ words \cdot 2^{14}\ blocks = 2^{22}\ bytes$
 1. P.A. bits = 22
@@ -240,8 +240,8 @@ P.A bits = 32
 Block Size = $32\ B = 2^5\ B$
 B/L Offset = 5
 Cache Size = 256 KB = $2^8 \cdot 2^{10} = 2^{18}\ bytes$
-# of Lines = $2^{(18-5)} = 2^{13}$
-# of Sets = $2^{(13-2)} = 2^{11}$
+\# of Lines = $2^{(18-5)} = 2^{13}$
+\# of Sets = $2^{(13-2)} = 2^{11}$
 Tag bits = 16 bits
 1. 16 bits
 Tag directory entry = $16 + 2 + 1 + 1 = 20\ bits$
@@ -250,16 +250,16 @@ Tag directory size = $2^{13} \cdot 20\ bits = 2^{13} \cdot 2^1 \cdot 10\ bits = 
 
 #flashcards/memory/mapping/associative/set/pyqs
 4-way Set Associative Cache
-# of Lines: 128
+\# of Lines: 128
 Line Size: 64 words
 P.A. bits: 20
 - P.A. split?
 ?
-# of Lines = 128 = $2^7$
+\# of Lines = 128 = $2^7$
 Line Size = 64 words = $2^6\ words$
 P.A. bits = 20 bits
 Block Offset = 6
-# of Sets = $2^{(7-2)} = 2^5$
+\# of Sets = $2^{(7-2)} = 2^5$
 Tag bits = P.A. bits - (Set # bits + B/L Offset bits) = $20 - (5 + 6) = 20 - 11 = 9\ bits$
 - P.A. split: 9 Tag bits; Set # bits 5; B/L Offset bits 6.
 
@@ -296,8 +296,8 @@ Cache size = $32\ KB = 2^{15}\ B$
 Block Size = $32\ B = 2^5\ B$
 Block offset = 5 bits
 Set Size = 2 lines
-# of lines = $2^{(15-5)} = 2^{10}$
-# of sets = $2^{(10-1)} = 2^9$
+\# of lines = $2^{(15-5)} = 2^{10}$
+\# of sets = $2^{(10-1)} = 2^9$
 - 18 tag bits; 9 set bits; 5 B/L bits.
     - $2^9 \cdot 1$ MUX
     - How many?
@@ -340,3 +340,55 @@ Line bits will be used as select lines for the MUX.
 Refactor with [this](https://www.youtube.com/watch?v=F_gOWc50MtI&list=PLBlnK6fEyqRjdT1xkkBZSXKwFKqQoYhwy&index=20)
 
 #flashcards/memory/mapping/associative/set/pyqs
+A 4-way set-associative cache memory unit with a capacity of 16 KB is built using a block size of 8 words.
+The word length is 32 bits. The size of the physical address space is 4GB.
+The number of bits for the TAg field is:
+a) 5
+b) 15
+c) 20
+d) 25
+?
+P.A.S = $4^{(2+30)} = 2^{32}$
+Word Size = 32 bits = $4 \cdot 8\ bits = 4\ B$
+Block Size = 8 words = $2^3 \cdot 4\ B = 2^{(3+2)} = 5\ B$
+B/L Offset = $log_2^{(2^5)} = 5$
+Cache Size = $2^{(4+10)} = 2^{14}$
+\# of Lines = $2^{(15-5)} = 2^9$
+\# of Sets = $2^{(9-2)} = 2^7$
+- 20 tag bits; 7 Set # bits; 5 B/L Offset bits
+This is a trick question though. "The word length is 32 bits" so it is not byte addressable (8 bit words, or one byte).
+We need to instead convert every unit to word.
+Word Size = 32 bits = $4 \cdot 8\ bits = 4\ B$
+P.A.S = $4\ GB = 4\ GB \div 4\ B = 1\ GW = 2^{30}\ W$
+Block Size = 8 words = $2^3\ W$
+Cache Size = 16 KB = $16\ KB \div 4\ B = 4\ KW = 2^{12}\ W$
+\# of Lines = $2^{(12-3)} = 2^9\ W$
+\# of Sets = $2^{(9-2)} = 2^7$
+- Tag bits 20; 7 Set # bits; 3 B/L Offset bits
+Though this specific question results in the same number of tag bits, note the different P.A. split.
+Answer: C - 20 bits
+
+#flashcards/memory/mapping/associative/set/pyqs
+The size of the physical address space of a processor is $2^P\ bytes$. The word length is $2^W\ bytes$.
+The capacity of cache memory is $2^N\ bytes$. The size of each cache block is $2^M\ words$.
+For a k-way set-associative cache memory, the length (in number of bits) of the tag field is:
+a) $P - N - log_2K$
+b) $P - N + log_2K$
+c) $P - N - M - W - log_2K$
+d) $P - n - M - W + log_2K$
+?
+P.A.S = $2^P\ B = 2^P \div 2^W = 2^{P-W}$
+Word Size = $2^W\ B$
+Cache Size = $2^N \div 2^W = 2^{N-W}\ words$
+Block Size = $2^M\ words$
+B/L Offset = M
+\# of Lines = $2^{(N-W)} \div 2^M = 2^{(N-W-M)}$
+$K = 2^X$
+\# of Sets = $2^{(N-W-M)} \div 2^X = 2^{(N-W-M) - X}$
+\# of Set bits = $N-W-M-X$
+Because X is our own variable and not given, let's replace it with items given in the example.
+$X = log_2K$
+\# of Sets = $2^{(N-W-M)} \div 2^X = 2^{(N-W-M) - log_2K}$
+\# of Set bits = $N-W-M-log_2K$
+\# of Tag bits = $(P-W) - ((N-W-M-log_2K) + M) = P-W - N+W+M+log_2K-M$
+- $P-N+log_2K$

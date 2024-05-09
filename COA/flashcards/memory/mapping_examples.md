@@ -106,14 +106,14 @@ Word Size: 1 Byte
 Given the following values, what is the cache size?
 Byte-Addressable MB Size: 16 GB
 Block Size: 16 KB
-# of Tag bits: 10
+\# of Tag bits: 10
 ?
 MM Size = 16 GB = $2^4 \cdot 2^{30}\ B = 2^{(4+30)} B = 2^{34}\ B$
-# of P.A. bits = $log_2\ 2^{34} = 34\ bits$
+\# of P.A. bits = $log_2\ 2^{34} = 34\ bits$
 Block Size = 16 KB = $2^4 \cdot 2^{10}\ B = 2^{4+10} B = 2^{14}\ B$
 Block Offset = $log_2\ 2^{14} = 14\ bits$
-# of Line Number Bits: P.A. Bits - (tag bits + offset) = 34 - (10 + 14) = 34 - 24 = 10 bits
-# of Cache Lines = 2^10
+\# of Line Number Bits: P.A. Bits - (tag bits + offset) = 34 - (10 + 14) = 34 - 24 = 10 bits
+\# of Cache Lines = 2^10
 Line Size = 2^14 B
 Cache Size = 2^10 $\cdot$ 2^14 B = 2^24 B = 16 MB
 
@@ -129,7 +129,7 @@ MM Size = $2^2\ bytes \cdot 2^{30}\ bytes = 2^{32}\ bytes$\
 P.A. bits = $log_2(2^{32}) = 32\ bits$\
 Block Size = $2^2\ bytes \cdot 2^{10}\ bytes = 2^{12}\ bytes$\
 Block Offset = $log_2(2^{12}) = 12\ bits$\
-# of Block in MM = $2^{32}\ bytes \div 2^{12}\ bytes = 2^{20}\ bytes$\
+\# of Block in MM = $2^{32}\ bytes \div 2^{12}\ bytes = 2^{20}\ bytes$\
 Block N. bits/# of Tag bits = $log_2(2^{20}) = 20\ bits$
 - 20 Block # bits/Tag Bits; 12 bits Block/Line offset\
 Cache Size = $2^{20}\ bytes$\
@@ -148,8 +148,8 @@ MM Size = $2^4 \cdot 2^{30}\ bytes = 2^{34}\ bytes$\
 P.A. bits = $log_2(2^{34}) = 34\ bits$\
 Block Size = $2^4 \cdot 2^{10}\ bytes = 2^{14}\ bytes$\
 Block Offset = $log_2(2^{14}) = 14$\
-# of Blocks = $2^{34}\ bytes \div 2^{14}\ bytes = 2^{20}\ bytes$\
-# of Block bits = $log_2(2^{20}) = 20\ bits$
+\# of Blocks = $2^{34}\ bytes \div 2^{14}\ bytes = 2^{20}\ bytes$\
+\# of Block bits = $log_2(2^{20}) = 20\ bits$
 - Fully associative mapping; Tag bits and Block bits are equivalent
 1. 20 Block/Tag bits; 14 block/line offset bits
 2. Unable to determine:
@@ -170,9 +170,9 @@ Block Size: 128 B
 P.A.S = $256\ MB = 2^{(8+20)} = 2^{28}\ bytes$
 Block Size = $2^{7}\ bytes$
 Offset = 7 bits
-# of Blocks in MM = $2^{(28 - 7)}\ = 2^{21}\ blocks$
+\# of Blocks in MM = $2^{(28 - 7)}\ = 2^{21}\ blocks$
 Cache Size = $2^{20}\ bytes$
-# of lines = $2^{(20-7)} = 2^{13}$
+\# of lines = $2^{(20-7)} = 2^{13}$
 No of sets = Number of lines $\div$ set size = $2^{(13-1)} = 2^{12}$
 Tag bits = $28 - (12 + 7) = 9
 1. 9 Tag bits; 12 Set # bits; 7 B/L offset bits
@@ -191,13 +191,13 @@ P.A.S = $4\ MB = 2^{(2+20)} = 2^{22}\ B$
 P.A. bits = $log_2(2^{22}) = 22\ bits$
 Block size = $64\ B = 2^6\ B$
 B/L Offset = $log_2(2^6) = 6\ bits$
-# of MM Blocks = $2^{22} \div 2^6 = 2^{(22-6)} = 2^{16}$
+\# of MM Blocks = $2^{22} \div 2^6 = 2^{(22-6)} = 2^{16}$
 Tag bits = 10
 Set Size = 4 = $2^2$
 Set # bits = $16 - 10 = 6$
 1. 10 Tag bits; 6 Set # bits; 6 B/L Offset bits
-# of Sets = $2^6$
-# of Lines = # of Sets $\cdot$ set size = $2^6 \cdot 2^2 = 2^8$
+\# of Sets = $2^6$
+\# of Lines = # of Sets $\cdot$ set size = $2^6 \cdot 2^2 = 2^8$
 2. Cache Size = $2^8 \cdot 2^6\ B = 2^{14}\ B = 2^4\ KB = 16\ KB$
     - Cache Size = (# of sets $\cdot$ Set Size) $\cdot$ Block Size
 
@@ -223,9 +223,9 @@ MM Size = $128\ KB = 2^7 \cdot 2^{10} = 2^{17}\ B$
 P.A. bits = $log_2(2^{17}) = 17\ bits$
 Block Size = $256\ B = 2^8\ B$
 B/L Offset = $log_2(2^8) = 8\ bits$
-# of MM Blocks = $2^{(17-8)} = 2^9$
+\# of MM Blocks = $2^{(17-8)} = 2^9$
 Cache Size = $16\ KB = 2^{14}$
-# of Cache Line = $2^{(14-8)} = 2^6$
+\# of Cache Line = $2^{(14-8)} = 2^6$
 1. 2-way
     - # of sets = $2^{(6-1)} = 2^5$
     - Tag bits = $9 - 5 = 4$
