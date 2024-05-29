@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "COA/memory/cache_design.md",
-                "mode": "source",
+                "file": "COA/memory/cache_replacement_policies.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COA/memory/cache_design.md",
+                "file": "COA/memory/cache_replacement_policies.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COA/memory/cache_design.md",
+                "file": "COA/memory/cache_replacement_policies.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "COA/memory/cache_design.md"
+                "file": "COA/memory/cache_replacement_policies.md"
               }
             }
           },
@@ -166,18 +166,22 @@
   },
   "active": "4291138847328cbf",
   "lastOpenFiles": [
+    "COA/memory/cache_replacement_policies.md~",
     "COA/memory/4913",
-    "COA/memory/images/Cache Design - Write Through Illustration.png",
+    "COA/memory/images/PLRU Example.png",
+    "COA/memory/cache_mapping.md",
+    "COA/memory/cache_intro.md",
+    "COA/memory/cache_replacement_policies.md",
+    "COA/flashcards/memory/mapping_pyqs.md",
     "COA/memory/cache_design.md",
+    "COA/memory/images/Cache Design - Write Through Illustration.png",
     "COA/memory/images/Cache Design - Write Back Illustration 2.png",
     "COA/memory/images/Cache Design - Write Back Illustration 1.png",
     "COA/memory/cache_design.md~",
-    "COA/flashcards/memory/mapping_pyqs.md",
     "COA/flashcards/memory/4913",
     "COA/flashcards/memory/mapping_pyqs.md~",
     "COA/flashcards/memory/mapping_examples.md~",
     "COA/memory/cache_mapping.md~",
-    "COA/memory/cache_mapping.md",
     "COA/flashcards/memory/hardware_implementation.md",
     "COA/flashcards/memory/hardware_implementation.md~",
     "COA/flashcards/memory/cache.md",
@@ -191,7 +195,6 @@
     "COA/memory/images/Cache Size Formula - Example.png",
     "COA/memory/associative_mapping.md",
     "COA/memory/direct_mapping.md",
-    "COA/memory/cache_intro.md",
     "COA/intro.md",
     "COA/memory/memory_intro.md",
     "COA/architecture/architecture_classifications.md",
@@ -203,13 +206,10 @@
     "COA/memory/hierarchy_and_interfacing.md",
     "COA/memory/cache_memory_intro.md",
     "COA/flashcards/architecture.md",
-    "COA/flashcards/architecture_index.md~",
     "COA/flashcards/architecture_index.md",
     "COA/flashcards/memory/intro.md",
     "COA/flashcards/architecture/classifications.md",
-    "COA/flashcards/architecture/history.md",
     "COA/memory/images/Set Associative Mapping - Diagram.png",
-    "COA/memory/images/Set Associative Mapping - Example.png",
-    "COA/memory/images/DMM HWI - 6 bit.png"
+    "COA/memory/images/Set Associative Mapping - Example.png"
   ]
 }
