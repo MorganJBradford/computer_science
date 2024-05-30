@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "COA/memory/cache_replacement_policies.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -166,19 +166,25 @@
   },
   "active": "4291138847328cbf",
   "lastOpenFiles": [
+    "COA/memory/images/LRU Cache Replacement 2 way pyq answer.png",
+    "COA/flashcards/memory/test.md",
+    "COA/flashcards/memory/cache_replacement_policies.md",
+    "COA/flashcards/memory/4913",
+    "COA/flashcards/memory/cache_replacement_policies.md~",
+    "COA/memory/cache_replacement_policies.md",
+    "COA/flashcards/memory/LRU_PYQs.md",
+    "COA/flashcards/memory/LRU_PYQs.md~",
+    "COA/memory/images/PLRU Example.png",
     "COA/memory/cache_replacement_policies.md~",
     "COA/memory/4913",
-    "COA/memory/images/PLRU Example.png",
     "COA/memory/cache_mapping.md",
     "COA/memory/cache_intro.md",
-    "COA/memory/cache_replacement_policies.md",
     "COA/flashcards/memory/mapping_pyqs.md",
     "COA/memory/cache_design.md",
     "COA/memory/images/Cache Design - Write Through Illustration.png",
     "COA/memory/images/Cache Design - Write Back Illustration 2.png",
     "COA/memory/images/Cache Design - Write Back Illustration 1.png",
     "COA/memory/cache_design.md~",
-    "COA/flashcards/memory/4913",
     "COA/flashcards/memory/mapping_pyqs.md~",
     "COA/flashcards/memory/mapping_examples.md~",
     "COA/memory/cache_mapping.md~",
@@ -187,8 +193,6 @@
     "COA/flashcards/memory/cache.md",
     "COA/memory/images/Cache Memory Mapping - Comparative Study Intro.png",
     "COA/memory/images/Cache Memory Mapping - Comparative Study.png",
-    "COA/index.md~",
-    "COA/4913",
     "COA/index.md",
     "COA/flashcards/memory/mapping_examples.md",
     "COA/memory/images/GATE CS 2014.png",
@@ -206,10 +210,6 @@
     "COA/memory/hierarchy_and_interfacing.md",
     "COA/memory/cache_memory_intro.md",
     "COA/flashcards/architecture.md",
-    "COA/flashcards/architecture_index.md",
-    "COA/flashcards/memory/intro.md",
-    "COA/flashcards/architecture/classifications.md",
-    "COA/memory/images/Set Associative Mapping - Diagram.png",
-    "COA/memory/images/Set Associative Mapping - Example.png"
+    "COA/memory/images/Set Associative Mapping - Diagram.png"
   ]
 }
