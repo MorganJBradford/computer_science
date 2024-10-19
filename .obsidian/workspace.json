@@ -11,12 +11,12 @@
             "id": "4291138847328cbf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "release-notes",
               "state": {
-                "file": "COA/memory/primary_memory_intro.md",
-                "mode": "source",
-                "source": false
-              }
+                "currentVersion": "1.7.4"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.4"
             }
           }
         ]
@@ -39,7 +39,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +56,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +66,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -85,7 +91,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COA/memory/primary_memory_intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +98,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
             }
           },
           {
@@ -102,10 +109,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "COA/memory/primary_memory_intro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
             }
           },
           {
@@ -116,7 +124,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -124,9 +134,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "COA/memory/primary_memory_intro.md"
-              }
+              "state": {},
+              "icon": "lucide-list",
+              "title": "Outline"
             }
           },
           {
@@ -134,7 +144,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -142,11 +154,23 @@
             "type": "leaf",
             "state": {
               "type": "review-queue-list-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          },
+          {
+            "id": "3809583403470c36",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -166,22 +190,27 @@
   },
   "active": "4291138847328cbf",
   "lastOpenFiles": [
-    "COA/memory/4913",
-    "COA/memory/primary_memory_intro.md~",
-    "COA/memory/cache-coherence.md",
+    "programming/paradigms/intro_to_paradigms.md",
+    "programming/paradigms",
+    "programming/paradigms/intro_to_paradigms.md~",
+    "programming/paradigms/4913",
+    "https/en.wikipedia.org/wiki",
+    "https/en.wikipedia.org",
+    "https",
+    "programming/paradigms/intro.md",
+    "programming/principles/intro.md~",
+    "programming/principles/4913",
+    "programming/principles/intro.md",
+    "programming/DSA_and_Theory",
+    "programming/standards",
     "COA/memory/primary_memory_intro.md",
-    "COA/memory/cache-coherence.md~",
-    "COA/flashcards/memory/cache_replacement_policies.md~",
-    "COA/flashcards/memory/4913",
+    "COA/memory/cache-coherence.md",
+    "COA/flashcards/memory/test.md",
     "COA/memory/cache_replacement_policies.md",
-    "COA/memory/cache_replacement_policies.md~",
-    "COA/flashcards/memory/cache-coherence.md~",
     "COA/flashcards/memory/cache-coherence.md",
     "COA/memory/images/LRU Cache Replacement 2 way pyq answer.png",
-    "COA/flashcards/memory/test.md",
     "COA/flashcards/memory/cache_replacement_policies.md",
     "COA/flashcards/memory/LRU_PYQs.md",
-    "COA/flashcards/memory/LRU_PYQs.md~",
     "COA/memory/images/PLRU Example.png",
     "COA/memory/cache_mapping.md",
     "COA/memory/cache_intro.md",
@@ -190,8 +219,6 @@
     "COA/memory/images/Cache Design - Write Through Illustration.png",
     "COA/memory/images/Cache Design - Write Back Illustration 2.png",
     "COA/memory/images/Cache Design - Write Back Illustration 1.png",
-    "COA/memory/cache_design.md~",
-    "COA/flashcards/memory/mapping_pyqs.md~",
     "COA/flashcards/memory/hardware_implementation.md",
     "COA/flashcards/memory/cache.md",
     "COA/memory/images/Cache Memory Mapping - Comparative Study Intro.png",
@@ -207,9 +234,6 @@
     "COA/architecture/architecture_classifications.md",
     "COA/architecture/architecture_basics.md",
     "architecture_classifications.md",
-    "architexture_classifications.md",
-    "COA/architecture/architexture_basics.md",
-    "memory_direct_mapping.md",
     "COA/memory/images/Set Associative Mapping - Diagram.png"
   ]
 }
