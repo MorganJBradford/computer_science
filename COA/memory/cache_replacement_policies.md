@@ -102,7 +102,7 @@ Fully Associative Cache with 4 lines
 | 2 | $\cancel{b_2}\ b_6$ |
 | 3 | $b_3$ |
 
-### Implemntation
+### Implementation
 Block Requests: 0, 1, 2, 3, 4, 2, 3, 1, 5, 6
 
 | Cache Line | MM Block in Line | Age bits (as decimal) |
